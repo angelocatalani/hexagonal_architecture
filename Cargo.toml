@@ -1,0 +1,14 @@
+[package]
+name = "pok"
+version = "0.1.0"
+authors = ["angelocat <catalaniangelo@gmail.com>"]
+edition = "2018"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "pokedex"
+
+[dependencies]
