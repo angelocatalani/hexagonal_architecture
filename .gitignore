@@ -1,4 +1,5 @@
+# keep this order to ignore the .idea/ and then include the run configurations
+/.idea/*
 !/.idea/runConfigurations/
 .DS_Store
-/.idea/*
 /target
