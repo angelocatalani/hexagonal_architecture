@@ -18,7 +18,8 @@ async fn pokemon_executes_request_to_pokeapi() {
         .await;
 
     let pokemon_endpoint = format!("{}/pokemon/{}", test_app.address, POKEMON_NAME);
+    println!("{}", pokemon_endpoint);
     let client = reqwest::Client::new();
-    let response = client.post(&pokemon_endpoint).send().await.unwrap();
-    assert_eq!(StatusCode::OK, response.status().as_u16());
+    let response = client.get(&pokemon_endpoint).send().await.unwrap();
+    assert_eq!(StatusCode::OK, response.status());
 }

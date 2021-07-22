@@ -14,10 +14,16 @@ impl PokedexApp {
         let port = tcp_listener.local_addr().unwrap().port();
 
         let server = HttpServer::new(move || {
-            App::new().route("/health_check", web::get().to(HttpResponse::Ok))
+            App::new()
+                .route("/health_check", web::get().to(HttpResponse::Ok))
+                .route("/pokemon/{name}", web::get().to(pokemon))
         })
         .listen(tcp_listener)
         .map(HttpServer::run);
         Ok(PokedexApp { server, port })
     }
+}
+
+async fn pokemon(_name: web::Path<String>) -> HttpResponse {
+    HttpResponse::Ok().finish()
 }
