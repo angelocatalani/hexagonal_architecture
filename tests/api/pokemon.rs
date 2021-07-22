@@ -60,7 +60,7 @@ async fn pokemon_parses_correctly_pokeapi_response() {
         "name": "mewtwo",
         "habitat": "rare",
         "description":"It was created by a scientist",
-        "is_legendary":true
+        "isLegendary":true
 
     });
     assert_eq!(correct, response.json::<Value>().await.unwrap());
