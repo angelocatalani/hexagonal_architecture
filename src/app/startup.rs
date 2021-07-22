@@ -3,6 +3,7 @@ use std::net::TcpListener;
 use actix_web::dev::Server;
 use actix_web::{web, App, HttpResponse, HttpServer};
 use graphql_client::GraphQLQuery;
+use serde_json::json;
 
 pub struct PokedexApp {
     pub server: Result<Server, std::io::Error>,
@@ -48,5 +49,5 @@ async fn pokemon(name: web::Path<String>, pokeapi_url: web::Data<String>) -> Htt
         .send()
         .await
         .unwrap();
-    HttpResponse::Ok().finish()
+    HttpResponse::Ok().json(json!({}))
 }
