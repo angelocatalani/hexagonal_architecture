@@ -1,0 +1,12 @@
+query PokemonInfo($name:String!) {
+    pokemon_v2_pokemonspecies(where: {name: {_eq: $name}}) {
+        name
+        pokemon_v2_pokemonhabitat {
+            name
+        }
+        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {pokemon_v2_language: {iso639: {_eq: "en"}}}) {
+            flavor_text
+        }
+        is_legendary
+    }
+}
