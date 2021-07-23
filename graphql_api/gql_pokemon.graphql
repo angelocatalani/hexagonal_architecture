@@ -1,5 +1,5 @@
-query PokemonInfo($name:String!) {
-    pokemons: pokemon_v2_pokemonspecies(where: {name: {_eq: $name}}) {
+query GqlPokemon($name:String!) {
+    info: pokemon_v2_pokemonspecies(where: {name: {_eq: $name}}) {
         name
         habitat: pokemon_v2_pokemonhabitat {
             name
@@ -7,6 +7,6 @@ query PokemonInfo($name:String!) {
         descriptions: pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {pokemon_v2_language: {iso639: {_eq: "en"}}}) {
             flavor_text
         }
-        isLegendary: is_legendary
+        is_legendary
     }
 }

@@ -15,13 +15,13 @@ async fn pokemon_parses_correctly_pokeapi_response() {
         .respond_with(ResponseTemplate::new(200).set_body_json(json!(
             {
                "data":{
-                  "pokemon_v2_pokemonspecies":[
+                  "info":[
                      {
                         "name":"mewtwo",
-                        "pokemon_v2_pokemonhabitat":{
+                        "habitat":{
                            "name":"rare"
                         },
-                        "pokemon_v2_pokemonspeciesflavortexts":[
+                        "descriptions":[
                            {
                               "flavor_text":"It was created by a scientist"
                            }
@@ -51,7 +51,7 @@ async fn pokemon_parses_correctly_pokeapi_response() {
 }
 
 #[actix_rt::test]
-async fn pokemon_returns_404_with_invalid_pokeapi_response() {
+async fn pokemon_returns_400_with_invalid_pokeapi_response() {
     let test_app = spawn_app().await;
 
     Mock::given(method("POST"))
@@ -64,5 +64,5 @@ async fn pokemon_returns_404_with_invalid_pokeapi_response() {
     let pokemon_endpoint = format!("{}/pokemon/{}", test_app.address, POKEMON_NAME);
     let client = reqwest::Client::new();
     let response = client.get(&pokemon_endpoint).send().await.unwrap();
-    assert_eq!(StatusCode::NOT_FOUND, response.status());
+    assert_eq!(StatusCode::BAD_REQUEST, response.status());
 }

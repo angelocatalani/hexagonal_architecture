@@ -2,8 +2,11 @@ use std::net::TcpListener;
 
 use actix_web::dev::Server;
 use actix_web::{web, App, HttpResponse, HttpServer};
+use anyhow::Context;
 use graphql_client::{GraphQLQuery, Response};
-use serde_json::json;
+use serde::Serialize;
+
+use crate::app::errors::PokedexError;
 
 pub struct PokedexApp {
     pub server: Result<Server, std::io::Error>,
@@ -33,37 +36,65 @@ impl PokedexApp {
 #[derive(GraphQLQuery)]
 #[graphql(
     schema_path = "graphql_api/schema.graphql",
-    query_path = "graphql_api/pokemon_info.graphql"
+    query_path = "graphql_api/gql_pokemon.graphql",
+    response_derives = "Clone"
 )]
-struct PokemonInfo;
+struct GqlPokemon;
 
-async fn pokemon(name: web::Path<String>, pokeapi_url: web::Data<String>) -> HttpResponse {
-    let request_body = PokemonInfo::build_query(pokemon_info::Variables {
+#[derive(Serialize)]
+struct Pokemon {
+    description: Option<String>,
+    habitat: Option<String>,
+    #[serde(rename = "isLegendary")]
+    is_legendary: bool,
+    name: String,
+}
+
+impl<'a> From<gql_pokemon::GqlPokemonInfo> for Pokemon {
+    fn from(gql_pokemon_info: gql_pokemon::GqlPokemonInfo) -> Self {
+        Pokemon {
+            description: gql_pokemon_info
+                .descriptions
+                .first()
+                .and_then(|d| Some(d.flavor_text.clone())),
+            habitat: gql_pokemon_info.habitat.and_then(|h| Some(h.name)),
+            is_legendary: gql_pokemon_info.is_legendary,
+            name: gql_pokemon_info.name,
+        }
+    }
+}
+
+async fn pokemon(
+    name: web::Path<String>,
+    pokeapi_url: web::Data<String>,
+) -> Result<HttpResponse, PokedexError> {
+    let request_body = GqlPokemon::build_query(gql_pokemon::Variables {
         name: name.into_inner(),
     });
     let client = reqwest::Client::new();
-    let graphql_response = client
+    let response = client
         .post(pokeapi_url.as_str())
         .json(&request_body)
         .header("Content-Type", "application/json")
         .send()
         .await
-        .unwrap();
+        .context("Failed to send request to pokeapi server")?;
 
-    let response_data: Response<pokemon_info::ResponseData> =
-        graphql_response.json().await.unwrap();
-    let d = response_data.data.unwrap();
-    let pokemon_info = d.pokemons.first().unwrap();
+    let graphql_response: Response<gql_pokemon::ResponseData> = response
+        .json()
+        .await
+        .context("Failed to serialize graphql response")?;
 
-    let pokemon_name = &pokemon_info.name;
-    let description = &pokemon_info.descriptions.first().unwrap().flavor_text;
-    let habitat = &pokemon_info.habitat.as_ref().unwrap().name;
-    let is_legendary = &pokemon_info.is_legendary;
-    HttpResponse::Ok().json(json!({
-        "name":pokemon_name,
-        "description":description,
-        "habitat": habitat,
-        "isLegendary": is_legendary
+    let graphql_data = graphql_response.data.as_ref().ok_or_else(|| {
+        PokedexError::InvalidRequest(format!(
+            "Empty response with errors: {:?}",
+            graphql_response.errors
+        ))
+    })?;
+    let first_pokemon = graphql_data
+        .info
+        .first()
+        .ok_or_else(|| PokedexError::InvalidRequest("Pokemon not found".to_string()))?;
 
-    }))
+    Ok(HttpResponse::Ok().json(Pokemon::from(first_pokemon.clone())))
 }
