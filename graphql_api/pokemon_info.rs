@@ -3,7 +3,7 @@ pub mod pokemon_info {
     #![allow(dead_code)]
     use std::result::Result;
     pub const OPERATION_NAME: &str = "PokemonInfo";
-    pub const QUERY : & str = "query PokemonInfo($name:String!) {\n    pokemon_v2_pokemonspecies(where: {name: {_eq: $name}}) {\n        name\n        pokemon_v2_pokemonhabitat {\n            name\n        }\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {pokemon_v2_language: {iso639: {_eq: \"en\"}}}) {\n            flavor_text\n        }\n        is_legendary\n    }\n}\n" ;
+    pub const QUERY : & str = "query PokemonInfo($name:String!) {\n    pokemon_v2_pokemonspecies(where: {name: {_eq: $name}}) {\n        name\n        pokemon_v2_pokemonhabitat {\n            name\n        }\n        pokemon_v2_pokemonspeciesflavortexts(limit: 1, where: {pokemon_v2_language: {iso639: {_eq: \"en\"}}}) {\n            flavor_text\n        }\n        isLegendary: is_legendary\n    }\n}\n" ;
     use super::*;
     use serde::{Deserialize, Serialize};
     #[allow(dead_code)]
@@ -30,6 +30,7 @@ pub mod pokemon_info {
             Option<PokemonInfoPokemonV2PokemonspeciesPokemonV2Pokemonhabitat>,
         pub pokemon_v2_pokemonspeciesflavortexts:
             Vec<PokemonInfoPokemonV2PokemonspeciesPokemonV2Pokemonspeciesflavortexts>,
+        #[serde(rename = "isLegendary")]
         pub is_legendary: Boolean,
     }
     #[derive(Deserialize)]

@@ -13,16 +13,16 @@ pub struct PokedexApp {
 impl PokedexApp {
     pub async fn new(
         binding_address: &str,
-        pokeapi_uri: String,
+        pokeapi_url: String,
     ) -> Result<PokedexApp, std::io::Error> {
         let tcp_listener = TcpListener::bind(binding_address)?;
         let port = tcp_listener.local_addr().unwrap().port();
-        let pokeapi_uri_data = web::Data::new(pokeapi_uri);
+        let pokeapi_url_data = web::Data::new(pokeapi_url);
         let server = HttpServer::new(move || {
             App::new()
                 .route("/health_check", web::get().to(HttpResponse::Ok))
                 .route("/pokemon/{name}", web::get().to(pokemon))
-                .app_data(pokeapi_uri_data.clone())
+                .app_data(pokeapi_url_data.clone())
         })
         .listen(tcp_listener)
         .map(HttpServer::run);
@@ -53,19 +53,11 @@ async fn pokemon(name: web::Path<String>, pokeapi_url: web::Data<String>) -> Htt
     let response_data: Response<pokemon_info::ResponseData> =
         graphql_response.json().await.unwrap();
     let d = response_data.data.unwrap();
-    let pokemon_info = d.pokemon_v2_pokemonspecies.first().unwrap();
+    let pokemon_info = d.pokemons.first().unwrap();
 
     let pokemon_name = &pokemon_info.name;
-    let description = &pokemon_info
-        .pokemon_v2_pokemonspeciesflavortexts
-        .first()
-        .unwrap()
-        .flavor_text;
-    let habitat = &pokemon_info
-        .pokemon_v2_pokemonhabitat
-        .as_ref()
-        .unwrap()
-        .name;
+    let description = &pokemon_info.descriptions.first().unwrap().flavor_text;
+    let habitat = &pokemon_info.habitat.as_ref().unwrap().name;
     let is_legendary = &pokemon_info.is_legendary;
     HttpResponse::Ok().json(json!({
         "name":pokemon_name,
