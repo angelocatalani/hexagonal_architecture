@@ -66,3 +66,26 @@ async fn pokemon_returns_400_with_invalid_pokeapi_response() {
     let response = client.get(&pokemon_endpoint).send().await.unwrap();
     assert_eq!(StatusCode::BAD_REQUEST, response.status());
 }
+
+#[actix_rt::test]
+async fn pokemon_returns_400_with_nonexistent_pokemon() {
+    let test_app = spawn_app().await;
+
+    Mock::given(method("POST"))
+        .and(header("Content-Type", "application/json"))
+        .respond_with(ResponseTemplate::new(200).set_body_json(json!(
+            {
+                "data":{
+                  "info":[]
+                }
+            }
+        )))
+        .expect(1)
+        .mount(&test_app.pokeapi_server)
+        .await;
+
+    let pokemon_endpoint = format!("{}/pokemon/nonexistent_pokemon", test_app.address);
+    let client = reqwest::Client::new();
+    let response = client.get(&pokemon_endpoint).send().await.unwrap();
+    assert_eq!(StatusCode::BAD_REQUEST, response.status());
+}
