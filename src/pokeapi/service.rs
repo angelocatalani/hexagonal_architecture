@@ -1,4 +1,5 @@
 use std::convert::TryInto;
+use std::time::Duration;
 
 use anyhow::Context;
 use graphql_client::{GraphQLQuery, Response};
@@ -13,9 +14,10 @@ pub struct PokeapiService {
 }
 
 impl PokeapiService {
-    pub fn new(url: Url) -> anyhow::Result<Self> {
+    pub fn new(url: Url, timeout_second: u64) -> anyhow::Result<Self> {
         Ok(Self {
             client: Client::builder()
+                .timeout(Duration::from_secs(timeout_second))
                 .build()
                 .context(format!("Error creating pokeapi client with:\nurl: {}", url,))?,
             url,
@@ -54,7 +56,6 @@ impl PokeapiService {
 
 #[cfg(test)]
 mod tests {
-    use reqwest::StatusCode;
     use serde_json::{json, Value};
     use wiremock::matchers::method;
     use wiremock::{Mock, MockServer, ResponseTemplate};
@@ -83,7 +84,7 @@ mod tests {
             .mount(&server)
             .await;
 
-        let service = PokeapiService::new(server.uri().parse().unwrap()).unwrap();
+        let service = PokeapiService::new(server.uri().parse().unwrap(), 10).unwrap();
 
         let correct_response = json!({
             "name": pokemon_name,
@@ -123,7 +124,7 @@ mod tests {
             .mount(&server)
             .await;
 
-        let service = PokeapiService::new(server.uri().parse().unwrap()).unwrap();
+        let service = PokeapiService::new(server.uri().parse().unwrap(), 10).unwrap();
 
         let correct_response = json!({
             "name": pokemon_name,
@@ -157,7 +158,7 @@ mod tests {
             .mount(&server)
             .await;
 
-        let service = PokeapiService::new(server.uri().parse().unwrap()).unwrap();
+        let service = PokeapiService::new(server.uri().parse().unwrap(), 10).unwrap();
 
         assert!(service
             .get_pokemon("any_pokemon".into())
@@ -182,7 +183,7 @@ mod tests {
             .mount(&server)
             .await;
 
-        let service = PokeapiService::new(server.uri().parse().unwrap()).unwrap();
+        let service = PokeapiService::new(server.uri().parse().unwrap(), 10).unwrap();
 
         assert!(service
             .get_pokemon("any_pokemon".into())
@@ -205,7 +206,7 @@ mod tests {
             .mount(&server)
             .await;
 
-        let service = PokeapiService::new(server.uri().parse().unwrap()).unwrap();
+        let service = PokeapiService::new(server.uri().parse().unwrap(), 10).unwrap();
         assert!(service
             .get_pokemon("any_pokemon".into())
             .await
@@ -214,16 +215,34 @@ mod tests {
     }
 
     #[tokio::test]
-    async fn pokeapi_service_handles_correctly_http_error_request() {
+    async fn pokeapi_service_handles_correctly_http_timeout() {
+        let timeout_seconds = 1;
         let server = MockServer::start().await;
 
         Mock::given(method("POST"))
-            .respond_with(ResponseTemplate::new(StatusCode::BAD_REQUEST))
+            .respond_with(
+                ResponseTemplate::new(200).set_delay(Duration::from_secs(timeout_seconds + 1)),
+            )
             .expect(1)
             .mount(&server)
             .await;
 
-        let service = PokeapiService::new(server.uri().parse().unwrap()).unwrap();
+        let service = PokeapiService::new(server.uri().parse().unwrap(), timeout_seconds).unwrap();
+        assert!(service.get_pokemon("any_pokemon".into()).await.is_err());
+    }
+
+    #[tokio::test]
+    async fn pokeapi_service_handles_correctly_http_error() {
+        let timeout_seconds = 1;
+        let server = MockServer::start().await;
+
+        Mock::given(method("POST"))
+            .respond_with(ResponseTemplate::new(500))
+            .expect(1)
+            .mount(&server)
+            .await;
+
+        let service = PokeapiService::new(server.uri().parse().unwrap(), timeout_seconds).unwrap();
         assert!(service.get_pokemon("any_pokemon".into()).await.is_err());
     }
 

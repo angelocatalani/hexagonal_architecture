@@ -17,6 +17,7 @@ pub struct ApplicationSettings {
 #[derive(Clone, Deserialize)]
 pub struct PokeApiServiceSettings {
     pub url: Url,
+    pub timeout_seconds: u64,
 }
 
 impl Settings {
