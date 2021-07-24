@@ -51,7 +51,7 @@ async fn pokemon_parses_correctly_pokeapi_response() {
 }
 
 #[actix_rt::test]
-async fn pokemon_returns_400_with_nonexistent_pokemon() {
+async fn pokemon_returns_bad_request_with_nonexistent_pokemon_name() {
     let test_app = spawn_app().await;
 
     Mock::given(method("POST"))
@@ -71,4 +71,21 @@ async fn pokemon_returns_400_with_nonexistent_pokemon() {
     let client = reqwest::Client::new();
     let response = client.get(&pokemon_endpoint).send().await.unwrap();
     assert_eq!(StatusCode::BAD_REQUEST, response.status());
+}
+
+#[actix_rt::test]
+async fn pokemon_returns_internal_server_error_on_http_error() {
+    let test_app = spawn_app().await;
+
+    Mock::given(method("POST"))
+        .and(header("Content-Type", "application/json"))
+        .respond_with(ResponseTemplate::new(StatusCode::INTERNAL_SERVER_ERROR))
+        .expect(1)
+        .mount(&test_app.pokeapi_server)
+        .await;
+
+    let pokemon_endpoint = format!("{}/pokemon/{}", test_app.address, POKEMON_NAME);
+    let client = reqwest::Client::new();
+    let response = client.get(&pokemon_endpoint).send().await.unwrap();
+    assert_eq!(StatusCode::INTERNAL_SERVER_ERROR, response.status());
 }
