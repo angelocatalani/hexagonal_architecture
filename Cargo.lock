@@ -1380,6 +1380,7 @@ dependencies = [
  "anyhow",
  "config 0.11.0",
  "graphql_client",
+ "lazy_static",
  "reqwest",
  "serde 1.0.126",
  "serde_json",

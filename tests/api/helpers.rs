@@ -1,6 +1,10 @@
 use wiremock::MockServer;
 
-use pok::{load_configuration, PokedexApp};
+use pok::{load_configuration, setup_tracing, PokedexApp};
+
+lazy_static::lazy_static! {
+ static ref TRACING: () = setup_tracing("test".into(),"debug".into());
+}
 
 pub struct TestApp {
     pub pokeapi_server: MockServer,
@@ -8,6 +12,7 @@ pub struct TestApp {
 }
 
 pub async fn spawn_app() -> TestApp {
+    lazy_static::initialize(&TRACING);
     let pokeapi_server = MockServer::start().await;
     let mut config = load_configuration().unwrap();
     config.application.port = 0;
