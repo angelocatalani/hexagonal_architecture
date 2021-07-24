@@ -22,9 +22,10 @@ impl PokedexApp {
             .local_addr()
             .context("Fail to extract port from binding url")?
             .port();
-        let pokeapi_service = web::Data::new(PokeapiService::new(
-            settings.pokeapi_service.url.parse().unwrap(),
-        ));
+        let pokeapi_service = web::Data::new(
+            PokeapiService::new(settings.pokeapi_service.url.parse()?)
+                .context("Failed to instantiate PokeapiService")?,
+        );
         let server = HttpServer::new(move || {
             App::new()
                 .route("/health_check", web::get().to(HttpResponse::Ok))

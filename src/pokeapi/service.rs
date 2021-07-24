@@ -5,7 +5,6 @@ use serde::Serialize;
 use graphql_client::{GraphQLQuery, Response};
 use std::convert::{TryFrom, TryInto};
 
-#[derive(Clone)]
 pub struct PokeapiService {
     client: Client,
     url: Url,
