@@ -3,5 +3,5 @@ host = "127.0.0.1"
 port = 8080
 
 [pokeapi_service]
-url = "https://beta.pokeapi.co/graphql/v1beta"
+url = "https://api.mailjet.com/v3.1/"
 timeout_seconds = 10
