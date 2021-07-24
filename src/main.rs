@@ -1,11 +1,14 @@
-use pok::PokedexApp;
+use anyhow::Context;
+
+use pok::{load_configuration, PokedexApp};
 
 #[actix_web::main]
-async fn main() -> std::io::Result<()> {
-    let app = PokedexApp::new(
-        "127.0.0.1:8080",
-        "https://beta.pokeapi.co/graphql/v1beta".into(),
-    )
-    .await?;
-    app.server?.await
+async fn main() -> anyhow::Result<()> {
+    let app = PokedexApp::new(load_configuration().context("Failed to load local configuration")?)
+        .await
+        .context("Failed to instantiate PokeapiApp")?;
+    app.server
+        .context("Failed to start server")?
+        .await
+        .map_err(Into::into)
 }

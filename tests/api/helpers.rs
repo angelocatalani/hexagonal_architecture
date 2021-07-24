@@ -1,6 +1,6 @@
 use wiremock::MockServer;
 
-use pok::PokedexApp;
+use pok::{load_configuration, PokedexApp};
 
 pub struct TestApp {
     pub pokeapi_server: MockServer,
@@ -9,9 +9,10 @@ pub struct TestApp {
 
 pub async fn spawn_app() -> TestApp {
     let pokeapi_server = MockServer::start().await;
-    let app = PokedexApp::new("127.0.0.1:0", pokeapi_server.uri())
-        .await
-        .unwrap();
+    let mut config = load_configuration().unwrap();
+    config.application.port = 0;
+    config.pokeapi_service.url = pokeapi_server.uri();
+    let app = PokedexApp::new(config).await.unwrap();
     tokio::spawn(app.server.unwrap());
     TestApp {
         pokeapi_server,

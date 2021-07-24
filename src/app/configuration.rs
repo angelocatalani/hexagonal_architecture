@@ -1,26 +1,26 @@
 use config::{Config, File};
 use serde::Deserialize;
 
-#[derive(Clone, Debug, Deserialize)]
+#[derive(Deserialize)]
 pub struct Settings {
     pub application: ApplicationSettings,
     pub pokeapi_service: PokeApiServiceSettings,
 }
 
-#[derive(Clone, Debug, Deserialize)]
+#[derive(Deserialize)]
 pub struct ApplicationSettings {
     pub host: String,
     pub port: u16,
 }
 
-#[derive(Clone, Debug, Deserialize)]
+#[derive(Clone, Deserialize)]
 pub struct PokeApiServiceSettings {
     pub url: String,
 }
 
-impl ApplicationSettings {
+impl Settings {
     pub fn binding_address(&self) -> String {
-        format!("{}:{}", self.host, self.port)
+        format!("{}:{}", self.application.host, self.application.port)
     }
 }
 
