@@ -22,7 +22,7 @@ struct Pokemon {
     name: String,
 }
 
-impl<'a> From<gql_pokemon::GqlPokemonInfo> for Pokemon {
+impl From<gql_pokemon::GqlPokemonInfo> for Pokemon {
     fn from(gql_pokemon_info: gql_pokemon::GqlPokemonInfo) -> Self {
         Pokemon {
             description: gql_pokemon_info
