@@ -4,4 +4,4 @@ port = 8080
 
 [pokeapi_service]
 url = "https://api.mailjet.com/v3.1/"
-timeout_seconds = 5
+timeout_seconds = 10
