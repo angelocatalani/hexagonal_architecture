@@ -1,9 +1,10 @@
-use anyhow::Context;
-use reqwest::{Client, Url};
-use serde::Serialize;
-
+use anyhow::{Context, Error};
 use graphql_client::{GraphQLQuery, Response};
-use std::convert::{TryFrom, TryInto};
+use reqwest::{Client, Url};
+use std::convert::TryInto;
+
+use crate::pokeapi::pokemon::{GqlPokemon, GqlPokemonResponse, GqlPokemonVariables};
+use crate::pokeapi::Pokemon;
 
 pub struct PokeapiService {
     client: Client,
@@ -21,7 +22,27 @@ impl PokeapiService {
     }
 
     pub async fn get_pokemon(&self, name: String) -> anyhow::Result<Result<Pokemon, String>> {
-        let request_body = GqlPokemon::build_query(gql_pokemon::Variables { name });
+        let graphql_response = self.execute_gql_pokemon_query(name).await?;
+
+        PokeapiService::parse_gql_pokemon_query(graphql_response)
+    }
+
+    fn parse_gql_pokemon_query(
+        graphql_response: Response<GqlPokemonResponse>,
+    ) -> anyhow::Result<Result<Pokemon, String>> {
+        let gqp_errors = graphql_response.errors;
+        let graphql_response_parsed = graphql_response
+            .data
+            .ok_or_else(|| format!("Empty response with errors: {:?}", gqp_errors));
+
+        Ok(graphql_response_parsed.and_then(TryInto::try_into))
+    }
+
+    async fn execute_gql_pokemon_query(
+        &self,
+        name: String,
+    ) -> anyhow::Result<Response<GqlPokemonResponse>> {
+        let request_body = GqlPokemon::build_query(GqlPokemonVariables { name });
 
         let response = self
             .client
@@ -32,53 +53,11 @@ impl PokeapiService {
             .await
             .context("Failed to send request")?;
 
-        let graphql_response: Response<gql_pokemon::ResponseData> = response
+        let graphql_response: Response<GqlPokemonResponse> = response
             .json()
             .await
             .context("Failed to serialize graphql response")?;
 
-        let gqp_errors = graphql_response.errors;
-        let graphql_response_parsed = graphql_response
-            .data
-            .ok_or_else(|| format!("Empty response with errors: {:?}", gqp_errors));
-
-        Ok(graphql_response_parsed.and_then(TryInto::try_into))
-    }
-}
-
-#[derive(GraphQLQuery)]
-#[graphql(
-    schema_path = "graphql_api/schema.graphql",
-    query_path = "graphql_api/gql_pokemon.graphql",
-    response_derives = "Clone"
-)]
-struct GqlPokemon;
-
-#[derive(Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct Pokemon {
-    description: Option<String>,
-    habitat: Option<String>,
-    is_legendary: bool,
-    name: String,
-}
-
-impl TryFrom<gql_pokemon::ResponseData> for Pokemon {
-    type Error = String;
-    fn try_from(response_data: gql_pokemon::ResponseData) -> Result<Self, Self::Error> {
-        let gql_pokemon_info = response_data
-            .info
-            .first()
-            .ok_or_else(|| "Pokemon not found".to_string())?;
-
-        Ok(Pokemon {
-            description: gql_pokemon_info
-                .descriptions
-                .first()
-                .map(|d| d.flavor_text.clone()),
-            habitat: gql_pokemon_info.habitat.as_ref().map(|h| h.name.clone()),
-            is_legendary: gql_pokemon_info.is_legendary,
-            name: gql_pokemon_info.name.clone(),
-        })
+        Ok(graphql_response)
     }
 }
