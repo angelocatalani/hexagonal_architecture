@@ -32,5 +32,4 @@ RUN apt-get update -y \
 COPY --from=builder /app/target/release/pokedex pokedex
 COPY configuration configuration
 ENV APP_APPLICATION__HOST "0.0.0.0"
-EXPOSE 8080
 ENTRYPOINT ["./pokedex"]

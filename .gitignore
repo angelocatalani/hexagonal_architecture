@@ -2,4 +2,5 @@
 /.idea/*
 !/.idea/runConfigurations/
 .DS_Store
+/dev
 /target
