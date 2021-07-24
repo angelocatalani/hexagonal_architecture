@@ -31,7 +31,7 @@ impl PokeapiService {
             .header("Content-Type", "application/json")
             .send()
             .await
-            .context("Failed to send request to pokeapi server")?;
+            .context("Failed to send request")?;
 
         let graphql_response: Response<gql_pokemon::ResponseData> = response
             .json()
@@ -43,12 +43,7 @@ impl PokeapiService {
             .data
             .ok_or_else(|| format!("Empty response with errors: {:?}", gqp_errors));
 
-        // let a: Result<gql_pokemon::GqlPokemonInfo, String> = graphql_response_parsed
-        //     .and_then(|graphql_data| graphql_data.info.first().map(Clone::clone));
-        // let k = a.map(Into::into);
-
-        let p: Result<Pokemon, String> = graphql_response_parsed.and_then(TryInto::try_into);
-        Ok(p)
+        Ok(graphql_response_parsed.and_then(TryInto::try_into))
     }
 }
 
