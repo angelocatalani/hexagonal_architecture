@@ -1,72 +1,15 @@
 use actix_web::{web, HttpResponse};
-use anyhow::Context;
-use graphql_client::{GraphQLQuery, Response};
-use serde::Serialize;
 
 use crate::app::errors::PokedexError;
-
-#[derive(GraphQLQuery)]
-#[graphql(
-    schema_path = "graphql_api/schema.graphql",
-    query_path = "graphql_api/gql_pokemon.graphql",
-    response_derives = "Clone"
-)]
-struct GqlPokemon;
-
-#[derive(Serialize)]
-#[serde(rename_all = "camelCase")]
-struct Pokemon {
-    description: Option<String>,
-    habitat: Option<String>,
-    is_legendary: bool,
-    name: String,
-}
-
-impl From<gql_pokemon::GqlPokemonInfo> for Pokemon {
-    fn from(gql_pokemon_info: gql_pokemon::GqlPokemonInfo) -> Self {
-        Pokemon {
-            description: gql_pokemon_info
-                .descriptions
-                .first()
-                .map(|d| d.flavor_text.clone()),
-            habitat: gql_pokemon_info.habitat.map(|h| h.name),
-            is_legendary: gql_pokemon_info.is_legendary,
-            name: gql_pokemon_info.name,
-        }
-    }
-}
+use crate::pokeapi::PokeapiService;
 
 pub async fn pokemon(
     name: web::Path<String>,
-    pokeapi_url: web::Data<String>,
+    pokeapi_service: web::Data<PokeapiService>,
 ) -> Result<HttpResponse, PokedexError> {
-    let request_body = GqlPokemon::build_query(gql_pokemon::Variables {
-        name: name.into_inner(),
-    });
-    let client = reqwest::Client::new();
-    let response = client
-        .post(pokeapi_url.as_str())
-        .json(&request_body)
-        .header("Content-Type", "application/json")
-        .send()
-        .await
-        .context("Failed to send request to pokeapi server")?;
+    let pokeapi_service_response = pokeapi_service.get_pokemon(name.into_inner()).await?;
 
-    let graphql_response: Response<gql_pokemon::ResponseData> = response
-        .json()
-        .await
-        .context("Failed to serialize graphql response")?;
+    let pokemon = pokeapi_service_response.map_err(|e| PokedexError::InvalidRequest(e))?;
 
-    let graphql_data = graphql_response.data.as_ref().ok_or_else(|| {
-        PokedexError::InvalidRequest(format!(
-            "Empty response with errors: {:?}",
-            graphql_response.errors
-        ))
-    })?;
-    let first_pokemon = graphql_data
-        .info
-        .first()
-        .ok_or_else(|| PokedexError::InvalidRequest("Pokemon not found".to_string()))?;
-
-    Ok(HttpResponse::Ok().json(Pokemon::from(first_pokemon.clone())))
+    Ok(HttpResponse::Ok().json(pokemon))
 }

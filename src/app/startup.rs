@@ -5,6 +5,7 @@ use actix_web::{web, App, HttpResponse, HttpServer};
 use anyhow::Context;
 
 use crate::app::{routes, Settings};
+use crate::pokeapi::PokeapiService;
 
 pub struct PokedexApp {
     pub server: Result<Server, anyhow::Error>,
@@ -21,12 +22,14 @@ impl PokedexApp {
             .local_addr()
             .context("Fail to extract port from binding url")?
             .port();
-        let pokeapi_url_data = web::Data::new(settings.pokeapi_service.url);
+        let pokeapi_service = web::Data::new(PokeapiService::new(
+            settings.pokeapi_service.url.parse().unwrap(),
+        ));
         let server = HttpServer::new(move || {
             App::new()
                 .route("/health_check", web::get().to(HttpResponse::Ok))
                 .route("/pokemon/{name}", web::get().to(routes::pokemon))
-                .app_data(pokeapi_url_data.clone())
+                .app_data(pokeapi_service.clone())
         })
         .listen(tcp_listener)
         .map(HttpServer::run)

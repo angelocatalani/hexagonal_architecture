@@ -5,7 +5,7 @@ use actix_web::{HttpResponse, ResponseError};
 
 #[derive(thiserror::Error)]
 pub enum PokedexError {
-    #[error("Invalid request: {0}")]
+    #[error("Unable to process request: {0}")]
     InvalidRequest(String),
     #[error("Unexpected internal error: {0}")]
     UnexpectedError(#[from] anyhow::Error),
