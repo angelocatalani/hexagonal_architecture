@@ -3,3 +3,4 @@ pub use app::PokedexApp;
 
 mod app;
 mod pokeapi;
+mod routes;

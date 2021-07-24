@@ -4,8 +4,9 @@ use actix_web::dev::Server;
 use actix_web::{web, App, HttpResponse, HttpServer};
 use anyhow::Context;
 
-use crate::app::{routes, Settings};
+use crate::app::Settings;
 use crate::pokeapi::PokeapiService;
+use crate::routes;
 
 pub struct PokedexApp {
     pub server: Result<Server, anyhow::Error>,
@@ -23,7 +24,7 @@ impl PokedexApp {
             .context("Fail to extract port from binding url")?
             .port();
         let pokeapi_service = web::Data::new(
-            PokeapiService::new(settings.pokeapi_service.url.parse()?)
+            PokeapiService::new(settings.pokeapi_service.url)
                 .context("Failed to instantiate PokeapiService")?,
         );
         let server = HttpServer::new(move || {

@@ -1,4 +1,5 @@
 use config::{Config, File};
+use reqwest::Url;
 use serde::Deserialize;
 
 #[derive(Deserialize)]
@@ -15,7 +16,7 @@ pub struct ApplicationSettings {
 
 #[derive(Clone, Deserialize)]
 pub struct PokeApiServiceSettings {
-    pub url: String,
+    pub url: Url,
 }
 
 impl Settings {

@@ -1,7 +1,7 @@
 use actix_web::{web, HttpResponse};
 
-use crate::app::errors::PokedexError;
 use crate::pokeapi::PokeapiService;
+use crate::routes::errors::PokedexError;
 
 pub async fn pokemon(
     name: web::Path<String>,
