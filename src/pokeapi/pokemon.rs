@@ -1,7 +1,7 @@
-use graphql_client::GraphQLQuery;
-use serde::Serialize;
-
 use std::convert::TryFrom;
+
+use graphql_client::{GraphQLQuery, Response};
+use serde::Serialize;
 
 #[derive(GraphQLQuery)]
 #[graphql(
@@ -24,9 +24,14 @@ pub struct Pokemon {
     name: String,
 }
 
-impl TryFrom<gql_pokemon::ResponseData> for Pokemon {
+impl TryFrom<Response<GqlPokemonResponse>> for Pokemon {
     type Error = String;
-    fn try_from(response_data: gql_pokemon::ResponseData) -> Result<Self, Self::Error> {
+    fn try_from(graphql_response: Response<GqlPokemonResponse>) -> Result<Self, Self::Error> {
+        let gql_errors = graphql_response.errors;
+        let response_data = graphql_response
+            .data
+            .ok_or_else(|| format!("Empty response with errors: {:?}", gql_errors))?;
+
         let gql_pokemon_info = response_data
             .info
             .first()
