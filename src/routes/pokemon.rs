@@ -16,7 +16,7 @@ pub async fn pokemon(
 ) -> Result<HttpResponse, PokedexError> {
     let pokeapi_service_response = pokeapi_service.get_pokemon(name.into_inner()).await?;
 
-    let pokemon = pokeapi_service_response.map_err(|e| PokedexError::InvalidRequest(e))?;
+    let pokemon = pokeapi_service_response.map_err(PokedexError::InvalidRequest)?;
 
     Ok(HttpResponse::Ok().json(pokemon))
 }

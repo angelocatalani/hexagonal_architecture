@@ -1,6 +1,6 @@
 use anyhow::Context;
 
-use pok::{load_configuration, PokedexApp, setup_tracing};
+use pok::{load_configuration, setup_tracing, PokedexApp};
 
 #[actix_web::main]
 async fn main() -> anyhow::Result<()> {
