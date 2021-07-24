@@ -56,8 +56,8 @@ impl<'a> From<gql_pokemon::GqlPokemonInfo> for Pokemon {
             description: gql_pokemon_info
                 .descriptions
                 .first()
-                .and_then(|d| Some(d.flavor_text.clone())),
-            habitat: gql_pokemon_info.habitat.and_then(|h| Some(h.name)),
+                .map(|d| d.flavor_text.clone()),
+            habitat: gql_pokemon_info.habitat.map(|h| h.name),
             is_legendary: gql_pokemon_info.is_legendary,
             name: gql_pokemon_info.name,
         }
