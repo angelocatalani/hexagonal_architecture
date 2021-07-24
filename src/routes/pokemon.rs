@@ -3,6 +3,13 @@ use actix_web::{web, HttpResponse};
 use crate::pokeapi::PokeapiService;
 use crate::routes::errors::PokedexError;
 
+#[tracing::instrument(
+name = "Getting pokemon info",
+skip(name, pokeapi_service),
+fields(
+pokemon_name = % name.as_str(),
+)
+)]
 pub async fn pokemon(
     name: web::Path<String>,
     pokeapi_service: web::Data<PokeapiService>,

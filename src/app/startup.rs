@@ -3,6 +3,7 @@ use std::net::TcpListener;
 use actix_web::dev::Server;
 use actix_web::{web, App, HttpResponse, HttpServer};
 use anyhow::Context;
+use tracing_actix_web::TracingLogger;
 
 use crate::app::Settings;
 use crate::pokeapi::PokeapiService;
@@ -35,6 +36,7 @@ impl PokedexApp {
                 .route("/health_check", web::get().to(HttpResponse::Ok))
                 .route("/pokemon/{name}", web::get().to(routes::pokemon))
                 .app_data(pokeapi_service.clone())
+                .wrap(TracingLogger::default())
         })
         .listen(tcp_listener)
         .map(HttpServer::run)

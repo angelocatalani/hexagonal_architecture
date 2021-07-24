@@ -44,7 +44,6 @@ impl PokeapiService {
             .send()
             .await
             .context("Failed to send request")?;
-
         let graphql_response: Response<GqlPokemonResponse> = response
             .json()
             .await

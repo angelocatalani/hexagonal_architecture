@@ -1,5 +1,4 @@
-pub use app::load_configuration;
-pub use app::PokedexApp;
+pub use app::{load_configuration, setup_tracing, PokedexApp};
 
 mod app;
 mod pokeapi;
