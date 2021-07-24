@@ -12,7 +12,7 @@ pub struct PokeapiService {
 }
 
 impl PokeapiService {
-    pub fn new(url: Url) -> Result<Self, anyhow::Error> {
+    pub fn new(url: Url) -> anyhow::Result<Self> {
         Ok(Self {
             client: Client::builder()
                 .build()
