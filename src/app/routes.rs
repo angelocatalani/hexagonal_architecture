@@ -14,10 +14,10 @@ use crate::app::errors::PokedexError;
 struct GqlPokemon;
 
 #[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
 struct Pokemon {
     description: Option<String>,
     habitat: Option<String>,
-    #[serde(rename = "isLegendary")]
     is_legendary: bool,
     name: String,
 }
