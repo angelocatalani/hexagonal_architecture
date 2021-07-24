@@ -1,0 +1,6 @@
+[application]
+host = "127.0.0.1"
+port = 8080
+
+[pokeapi_service]
+url = "https://api.mailjet.com/v3.1/"
