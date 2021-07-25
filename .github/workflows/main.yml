@@ -82,6 +82,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: pokedex
+          tags: challengepokedex1/pokedex
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
