@@ -36,27 +36,48 @@ pub async fn spawn_app() -> TestApp {
     }
 }
 
-pub fn valid_pokeapi_response() -> Value {
-    json!(
-        {
-           "data":{
-              "info":[
-                 {
-                    "name":"any_pokemon",
-                    "habitat":{
-                       "name":"any_habitat"
-                    },
-                    "descriptions":[
-                       {
-                          "flavor_text":"any_description"
-                       }
-                    ],
-                    "is_legendary":true
-                 }
-              ]
-           }
+pub struct PokeApiResponseBuilder<'a> {
+    habitat_name: &'a str,
+    is_legendary: bool,
+}
+
+impl<'a> PokeApiResponseBuilder<'a> {
+    pub fn new() -> PokeApiResponseBuilder<'a> {
+        Self {
+            habitat_name: "any_habitat",
+            is_legendary: true,
         }
-    )
+    }
+    pub fn with_habitat(&mut self, name: &'a str) -> &mut Self {
+        self.habitat_name = name;
+        self
+    }
+    pub fn with_legendary_status(&mut self, is_legendary: bool) -> &mut Self {
+        self.is_legendary = is_legendary;
+        self
+    }
+    pub fn finish(&self) -> Value {
+        json!(
+            {
+               "data":{
+                  "info":[
+                     {
+                        "name":"any_pokemon",
+                        "habitat":{
+                           "name":self.habitat_name
+                        },
+                        "descriptions":[
+                           {
+                              "flavor_text":"any_description"
+                           }
+                        ],
+                        "is_legendary":self.is_legendary
+                     }
+                  ]
+               }
+            }
+        )
+    }
 }
 
 pub fn valid_translation_response() -> Value {
