@@ -3,34 +3,14 @@ use serde_json::json;
 use wiremock::matchers::method;
 use wiremock::{Mock, ResponseTemplate};
 
-use crate::api::helpers::spawn_app;
+use crate::api::helpers::{spawn_app, valid_pokeapi_response};
 
 #[actix_rt::test]
 async fn pokemon_returns_200_with_valid_input() {
     let test_app = spawn_app().await;
-    let valid_pokeapi_response = json!(
-        {
-           "data":{
-              "info":[
-                 {
-                    "name":"any_pokemon",
-                    "habitat":{
-                       "name":"any_habitat"
-                    },
-                    "descriptions":[
-                       {
-                          "flavor_text":"any_description"
-                       }
-                    ],
-                    "is_legendary":true
-                 }
-              ]
-           }
-        }
-    );
 
     Mock::given(method("POST"))
-        .respond_with(ResponseTemplate::new(200).set_body_json(valid_pokeapi_response))
+        .respond_with(ResponseTemplate::new(200).set_body_json(valid_pokeapi_response()))
         .expect(1)
         .mount(&test_app.pokeapi_server)
         .await;

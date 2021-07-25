@@ -1,3 +1,4 @@
+use serde_json::Value;
 use wiremock::MockServer;
 
 use pok::{load_configuration, setup_tracing, PokedexApp};
@@ -23,4 +24,27 @@ pub async fn spawn_app() -> TestApp {
         pokeapi_server,
         address: format!("http://127.0.0.1:{}", app.port),
     }
+}
+
+pub fn valid_pokeapi_response() -> Value {
+    json!(
+        {
+           "data":{
+              "info":[
+                 {
+                    "name":"any_pokemon",
+                    "habitat":{
+                       "name":"any_habitat"
+                    },
+                    "descriptions":[
+                       {
+                          "flavor_text":"any_description"
+                       }
+                    ],
+                    "is_legendary":true
+                 }
+              ]
+           }
+        }
+    )
 }
