@@ -1,9 +1,9 @@
-use actix_web::{web, HttpResponse};
+use actix_web::{HttpResponse, web};
+use actix_web::web::Data;
 
 use crate::pokeapi::{PokeapiService, Pokemon};
 use crate::routes::errors::PokedexError;
 use crate::translated::TranslatedService;
-use actix_web::web::Data;
 
 pub async fn pokemon_translated(
     name: web::Path<String>,
@@ -13,9 +13,17 @@ pub async fn pokemon_translated(
     let pokeapi_service_response = pokeapi_service.get_pokemon(name.into_inner()).await?;
     let mut pokemon = pokeapi_service_response.map_err(PokedexError::InvalidRequest)?;
 
-    let new_description = translate_pokemon_description(translated_service, &pokemon).await?;
-    pokemon.set_description(new_description);
-    Ok(HttpResponse::Ok().json(pokemon))
+    let translated_description = translate_pokemon_description(translated_service, &pokemon).await;
+
+    match translated_description {
+        Ok(description) => {
+            pokemon.set_description(description);
+            Ok(HttpResponse::Ok().json(&pokemon))
+        }
+        Err(_) => {
+            Ok(HttpResponse::Ok().json(&pokemon))
+        }
+    }
 }
 
 async fn translate_pokemon_description(
