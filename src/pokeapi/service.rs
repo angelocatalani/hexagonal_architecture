@@ -19,15 +19,15 @@ impl PokeapiService {
             client: Client::builder()
                 .timeout(Duration::from_secs(timeout_second))
                 .build()
-                .context(format!("Error creating pokeapi client with:\nurl: {}", url,))?,
+                .context(format!("Error creating client with:\nurl: {}", url,))?,
             url,
         })
     }
 
     pub async fn get_pokemon(&self, name: String) -> anyhow::Result<Result<Pokemon, String>> {
-        let graphql_response = self.execute_gql_pokemon_query(name).await?;
-
-        Ok(graphql_response.try_into())
+        self.execute_gql_pokemon_query(name)
+            .await
+            .map(TryInto::try_into)
     }
 
     async fn execute_gql_pokemon_query(
@@ -44,7 +44,8 @@ impl PokeapiService {
             .send()
             .await
             .context("Failed to send request")?;
-        let graphql_response: Response<GqlPokemonResponse> = response
+
+        let graphql_response = response
             .json()
             .await
             .context("Failed to serialize graphql response")?;
