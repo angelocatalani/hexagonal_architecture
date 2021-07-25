@@ -13,19 +13,24 @@ pub async fn pokemon_translated(
     let pokeapi_service_response = pokeapi_service.get_pokemon(name.into_inner()).await?;
     let mut pokemon = pokeapi_service_response.map_err(PokedexError::InvalidRequest)?;
 
-    pokemon.set_description(translate_pokemon_description(translated_service, &pokemon));
+    let new_description = translate_pokemon_description(translated_service, &pokemon).await?;
+    pokemon.set_description(new_description);
     Ok(HttpResponse::Ok().json(pokemon))
 }
 
-fn translate_pokemon_description(
+async fn translate_pokemon_description(
     translated_service: Data<TranslatedService>,
     pokemon: &Pokemon,
-) -> Option<String> {
-    pokemon.description().as_ref().map(|text| {
-        if pokemon.has_cave_habitat() || pokemon.is_legendary() {
-            translated_service.translate_with_yoda(text)
-        } else {
-            translated_service.translate_with_shakespeare(text)
+) -> anyhow::Result<Option<String>> {
+    match pokemon.description() {
+        None => Ok(None),
+        Some(text) => {
+            let new_description = if pokemon.has_cave_habitat_or_is_legendary() {
+                translated_service.translate_with_yoda(text).await?
+            } else {
+                translated_service.translate_with_shakespeare(text).await?
+            };
+            Ok(Some(new_description))
         }
-    })
+    }
 }

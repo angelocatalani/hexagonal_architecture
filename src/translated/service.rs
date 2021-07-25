@@ -18,10 +18,10 @@ impl TranslatedService {
             url,
         })
     }
-    pub fn translate_with_yoda(&self, text: &str) -> String {
-        unimplemented!()
+    pub async fn translate_with_yoda(&self, text: &str) -> anyhow::Result<String> {
+        Ok(text.to_string())
     }
-    pub fn translate_with_shakespeare(&self, text: &str) -> String {
-        unimplemented!()
+    pub async fn translate_with_shakespeare(&self, text: &str) -> anyhow::Result<String> {
+        Ok(text.to_string())
     }
 }

@@ -6,6 +6,6 @@ port = 8080
 url = "https://beta.pokeapi.co/graphql/v1beta"
 timeout_seconds = 10
 
-[translation_service]
+[translated_service]
 url = "https://api.funtranslations.com/translate/"
 timeout_seconds = 10

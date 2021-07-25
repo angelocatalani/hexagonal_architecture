@@ -52,19 +52,13 @@ impl TryFrom<Response<GqlPokemonResponse>> for Pokemon {
 }
 
 impl Pokemon {
-    pub fn has_cave_habitat(&self) -> bool {
-        self.habitat == Some("cave".to_string())
-    }
-    pub fn is_legendary(&self) -> bool {
-        self.is_legendary
-    }
-    pub fn has_empty_description(&self) -> bool {
-        self.description.is_none()
+    pub fn has_cave_habitat_or_is_legendary(&self) -> bool {
+        self.habitat == Some("cave".to_string()) || self.is_legendary
     }
     pub fn description(&self) -> &Option<String> {
         &self.description
     }
     pub fn set_description(&mut self, description: Option<String>) {
-        self.description = description;
+        self.description = description
     }
 }

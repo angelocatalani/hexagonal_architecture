@@ -18,7 +18,7 @@ async fn pokemon_translated_returns_200_with_valid_input() {
     Mock::given(method("POST"))
         .respond_with(ResponseTemplate::new(200).set_body_json(valid_translation_response()))
         .expect(1)
-        .mount(&test_app.translation_server)
+        .mount(&test_app.translated_server)
         .await;
 
     let response = execute_get_request(&format!(

@@ -8,6 +8,7 @@ use tracing_actix_web::TracingLogger;
 use crate::app::Settings;
 use crate::pokeapi::PokeapiService;
 use crate::routes;
+use crate::translated::TranslatedService;
 
 pub struct PokedexApp {
     pub server: Result<Server, anyhow::Error>,
@@ -31,6 +32,13 @@ impl PokedexApp {
             )
             .context("Failed to instantiate PokeapiService")?,
         );
+        let translated_service = web::Data::new(
+            TranslatedService::new(
+                settings.translated_service.url,
+                settings.translated_service.timeout_seconds,
+            )
+            .context("Failed to instantiate PokeapiService")?,
+        );
         let server = HttpServer::new(move || {
             App::new()
                 .route("/health_check", web::get().to(HttpResponse::Ok))
@@ -40,6 +48,7 @@ impl PokedexApp {
                     web::get().to(routes::pokemon_translated),
                 )
                 .app_data(pokeapi_service.clone())
+                .app_data(translated_service.clone())
                 .wrap(TracingLogger::default())
         })
         .listen(tcp_listener)
