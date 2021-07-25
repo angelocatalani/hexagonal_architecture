@@ -1,6 +1,7 @@
 # Pokedex
 
 [![Actions Status](https://github.com/angelocatalani/pok/actions/workflows/main.yml/badge.svg)](https://github.com/angelocatalani/pok/actions)
+[![Actions Status](https://github.com/angelocatalani/pok/actions/workflows/scheduled_audit.yml/badge.svg)](https://github.com/angelocatalani/pok/actions)
 
 # Table of Contents
 
