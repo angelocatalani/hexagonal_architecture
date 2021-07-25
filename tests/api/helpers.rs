@@ -1,5 +1,5 @@
 use reqwest::Response;
-use serde_json::{Value,json};
+use serde_json::{json, Value};
 use wiremock::MockServer;
 
 use pok::{load_configuration, setup_tracing, PokedexApp};
@@ -11,7 +11,7 @@ lazy_static::lazy_static! {
 pub struct TestApp {
     pub address: String,
     pub pokeapi_server: MockServer,
-    pub translation_server: MockServer
+    pub translation_server: MockServer,
 }
 
 pub async fn spawn_app() -> TestApp {
@@ -32,7 +32,7 @@ pub async fn spawn_app() -> TestApp {
     TestApp {
         address: format!("http://127.0.0.1:{}", app.port),
         pokeapi_server,
-        translation_server
+        translation_server,
     }
 }
 

@@ -6,7 +6,7 @@ use serde::Deserialize;
 pub struct Settings {
     pub application: ApplicationSettings,
     pub pokeapi_service: PokeApiServiceSettings,
-    pub translation_service: TranslationServiceSettings
+    pub translation_service: TranslationServiceSettings,
 }
 
 #[derive(Deserialize)]

@@ -35,6 +35,10 @@ impl PokedexApp {
             App::new()
                 .route("/health_check", web::get().to(HttpResponse::Ok))
                 .route("/pokemon/{name}", web::get().to(routes::pokemon))
+                .route(
+                    "/pokemon/translated/{name}",
+                    web::get().to(routes::pokemon_translated),
+                )
                 .app_data(pokeapi_service.clone())
                 .wrap(TracingLogger::default())
         })

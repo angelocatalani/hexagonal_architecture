@@ -27,5 +27,5 @@ async fn pokemon_translated_returns_200_with_valid_input() {
         test_app.address
     ))
     .await;
-    assert_eq!(StatusCode::OK, response.status());
+    assert_eq!(200, response.status());
 }
