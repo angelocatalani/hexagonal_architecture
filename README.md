@@ -27,7 +27,7 @@ The CI builds and pushes on each successful commit the docker image.
 We can run it locally in a new container with:
 
 ```shell
-docker run challengepokedex1/pokedex -p 8080:8080
+docker run -p 8080:8080 challengepokedex1/pokedex
 ```
 
 We can also run the server locally with:
