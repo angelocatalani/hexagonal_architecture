@@ -1,4 +1,3 @@
-use reqwest::StatusCode;
 use wiremock::matchers::method;
 use wiremock::{Mock, ResponseTemplate};
 

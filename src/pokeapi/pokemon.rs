@@ -50,3 +50,12 @@ impl TryFrom<Response<GqlPokemonResponse>> for Pokemon {
         })
     }
 }
+
+impl Pokemon {
+    pub fn habitat_is_cave(&self) -> bool {
+        self.habitat == Some("cave".to_string())
+    }
+    pub fn is_legendary(&self) -> bool {
+        self.is_legendary
+    }
+}
