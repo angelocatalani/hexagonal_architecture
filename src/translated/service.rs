@@ -79,7 +79,7 @@ mod tests {
         assert_eq!(
             translated_description,
             service
-                .translate_with_shakespeare("any_text".into())
+                .translate_with_shakespeare("any_text")
                 .await
                 .unwrap()
         );
@@ -103,10 +103,7 @@ mod tests {
         let service = TranslatedService::new(server.uri().parse().unwrap(), 10).unwrap();
         assert_eq!(
             translated_description,
-            service
-                .translate_with_yoda("any_text".into())
-                .await
-                .unwrap()
+            service.translate_with_yoda("any_text").await.unwrap()
         );
     }
 
@@ -121,12 +118,9 @@ mod tests {
             .await;
 
         let service = TranslatedService::new(server.uri().parse().unwrap(), 10).unwrap();
+        assert!(service.translate_with_yoda("any_text").await.is_err());
         assert!(service
-            .translate_with_yoda("any_text".into())
-            .await
-            .is_err());
-        assert!(service
-            .translate_with_shakespeare("any_text".into())
+            .translate_with_shakespeare("any_text")
             .await
             .is_err());
     }
@@ -142,12 +136,9 @@ mod tests {
             .await;
 
         let service = TranslatedService::new(server.uri().parse().unwrap(), 10).unwrap();
+        assert!(service.translate_with_yoda("any_text").await.is_err());
         assert!(service
-            .translate_with_yoda("any_text".into())
-            .await
-            .is_err());
-        assert!(service
-            .translate_with_shakespeare("any_text".into())
+            .translate_with_shakespeare("any_text")
             .await
             .is_err());
     }
