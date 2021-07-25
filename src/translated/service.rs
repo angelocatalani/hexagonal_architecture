@@ -38,7 +38,6 @@ impl TranslatedService {
         self.client
             .post(endpoint)
             .form(&TranslatedInput { text })
-            .header("Content-Type", "application/json")
             .send()
             .await
             .context("Failed to send request")
@@ -50,5 +49,5 @@ async fn parse_response(response: Response) -> anyhow::Result<String> {
         .json::<TranslatedOutput>()
         .await
         .context("Failed to parse the response")?;
-    Ok(description.translated)
+    Ok(description.translated())
 }
