@@ -15,7 +15,7 @@ pub type GqlPokemonVariables = gql_pokemon::Variables;
 
 pub type GqlPokemonResponse = gql_pokemon::ResponseData;
 
-#[derive(Serialize)]
+#[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Pokemon {
     #[serde(skip_serializing_if = "Option::is_none")]
