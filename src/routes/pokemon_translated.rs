@@ -1,5 +1,5 @@
-use actix_web::{HttpResponse, web};
 use actix_web::web::Data;
+use actix_web::{web, HttpResponse};
 
 use crate::pokeapi::{PokeapiService, Pokemon};
 use crate::routes::errors::PokedexError;
@@ -20,9 +20,7 @@ pub async fn pokemon_translated(
             pokemon.set_description(description);
             Ok(HttpResponse::Ok().json(&pokemon))
         }
-        Err(_) => {
-            Ok(HttpResponse::Ok().json(&pokemon))
-        }
+        Err(_) => Ok(HttpResponse::Ok().json(&pokemon)),
     }
 }
 
