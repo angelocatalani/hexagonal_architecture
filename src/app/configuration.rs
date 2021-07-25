@@ -6,6 +6,7 @@ use serde::Deserialize;
 pub struct Settings {
     pub application: ApplicationSettings,
     pub pokeapi_service: PokeApiServiceSettings,
+    pub translation_service: TranslationServiceSettings
 }
 
 #[derive(Deserialize)]
@@ -14,8 +15,14 @@ pub struct ApplicationSettings {
     pub port: u16,
 }
 
-#[derive(Clone, Deserialize)]
+#[derive(Deserialize)]
 pub struct PokeApiServiceSettings {
+    pub url: Url,
+    pub timeout_seconds: u64,
+}
+
+#[derive(Deserialize)]
+pub struct TranslationServiceSettings {
     pub url: Url,
     pub timeout_seconds: u64,
 }
