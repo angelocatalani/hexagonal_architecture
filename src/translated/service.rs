@@ -51,3 +51,119 @@ async fn parse_response(response: Response) -> anyhow::Result<String> {
         .context("Failed to parse the response")?;
     Ok(description.translated())
 }
+
+#[cfg(test)]
+mod tests {
+    use serde_json::{json, Value};
+    use wiremock::matchers::{method, path};
+    use wiremock::{Mock, MockServer, ResponseTemplate};
+
+    use super::*;
+
+    #[tokio::test]
+    async fn translated_service_successfully_parses_valid_shakespeare_response() {
+        let server = MockServer::start().await;
+        let translated_description = "translated_description";
+
+        Mock::given(method("POST"))
+            .and(path("/shakespeare.json"))
+            .respond_with(
+                ResponseTemplate::new(200)
+                    .set_body_json(translated_valid_response(translated_description)),
+            )
+            .expect(1)
+            .mount(&server)
+            .await;
+
+        let service = TranslatedService::new(server.uri().parse().unwrap(), 10).unwrap();
+        assert_eq!(
+            translated_description,
+            service
+                .translate_with_shakespeare("any_text".into())
+                .await
+                .unwrap()
+        );
+    }
+
+    #[tokio::test]
+    async fn translated_service_successfully_parses_valid_yoda_response() {
+        let server = MockServer::start().await;
+        let translated_description = "translated_description";
+
+        Mock::given(method("POST"))
+            .and(path("/yoda.json"))
+            .respond_with(
+                ResponseTemplate::new(200)
+                    .set_body_json(translated_valid_response(translated_description)),
+            )
+            .expect(1)
+            .mount(&server)
+            .await;
+
+        let service = TranslatedService::new(server.uri().parse().unwrap(), 10).unwrap();
+        assert_eq!(
+            translated_description,
+            service
+                .translate_with_yoda("any_text".into())
+                .await
+                .unwrap()
+        );
+    }
+
+    #[tokio::test]
+    async fn translated_service_successfully_handles_invalid_response() {
+        let server = MockServer::start().await;
+
+        Mock::given(method("POST"))
+            .respond_with(ResponseTemplate::new(200).set_body_json(json!({})))
+            .expect(2)
+            .mount(&server)
+            .await;
+
+        let service = TranslatedService::new(server.uri().parse().unwrap(), 10).unwrap();
+        assert!(service
+            .translate_with_yoda("any_text".into())
+            .await
+            .is_err());
+        assert!(service
+            .translate_with_shakespeare("any_text".into())
+            .await
+            .is_err());
+    }
+
+    #[tokio::test]
+    async fn translated_service_successfully_handles_http_error_response() {
+        let server = MockServer::start().await;
+
+        Mock::given(method("POST"))
+            .respond_with(ResponseTemplate::new(500))
+            .expect(2)
+            .mount(&server)
+            .await;
+
+        let service = TranslatedService::new(server.uri().parse().unwrap(), 10).unwrap();
+        assert!(service
+            .translate_with_yoda("any_text".into())
+            .await
+            .is_err());
+        assert!(service
+            .translate_with_shakespeare("any_text".into())
+            .await
+            .is_err());
+    }
+
+    fn translated_valid_response(translated_description: &str) -> Value {
+        json!(
+            {
+                "success": {
+                    "total": 1
+                },
+                "contents": {
+                    "translated": translated_description,
+                    "text": "any_text",
+                    "translation": "any_translation"
+                }
+            }
+        )
+    }
+}
