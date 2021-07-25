@@ -10,7 +10,47 @@
 
 ## Usage
 
-TODO
+First, we need to clone the repo:
+
+```shell
+git clone git@github.com:angelocatalani/newsletter.git
+```
+
+Secondly, we can run the server inside a local container, with `docker compose`
+
+```shell
+docker compose up
+```
+
+The CI builds and pushes on each successful commit the docker image.
+
+We can run it locally in a new container with:
+
+```shell
+docker run challengepokedex1/pokedex -p 8080:8080
+```
+
+We can also run the server locally with:
+
+```shell
+cargo run --bin pokedex
+```
+
+and the tests with:
+
+```shell
+cargo test
+```
+
+We can hit the `pokedex` rotes with:
+
+ ```shell
+curl -vv -X GET localhost:8080/health_check
+```
+
+ ```shell
+curl -vv -X GET localhost:8080/pokemon/mewtwo
+```
 
 ## Production API
 
