@@ -19,7 +19,7 @@ pub type GqlPokemonResponse = gql_pokemon::ResponseData;
 #[serde(rename_all = "camelCase")]
 pub struct Pokemon {
     #[serde(skip_serializing_if = "Option::is_none")]
-    description: Option<String>,
+    pub(crate) description: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     habitat: Option<String>,
     is_legendary: bool,
@@ -52,10 +52,19 @@ impl TryFrom<Response<GqlPokemonResponse>> for Pokemon {
 }
 
 impl Pokemon {
-    pub fn habitat_is_cave(&self) -> bool {
+    pub fn has_cave_habitat(&self) -> bool {
         self.habitat == Some("cave".to_string())
     }
     pub fn is_legendary(&self) -> bool {
         self.is_legendary
+    }
+    pub fn has_empty_description(&self) -> bool {
+        self.description.is_none()
+    }
+    pub fn description(&self) -> &Option<String> {
+        &self.description
+    }
+    pub fn set_description(&mut self, description: Option<String>) {
+        self.description = description;
     }
 }

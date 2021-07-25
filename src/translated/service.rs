@@ -18,7 +18,10 @@ impl TranslatedService {
             url,
         })
     }
-    pub fn translate(&self, _text: &str) {
+    pub fn translate_with_yoda(&self, text: &str) -> String {
+        unimplemented!()
+    }
+    pub fn translate_with_shakespeare(&self, text: &str) -> String {
         unimplemented!()
     }
 }
