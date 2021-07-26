@@ -44,7 +44,7 @@ and the tests with:
 cargo test
 ```
 
-We can hit the `pokedex` rotes with:
+We can hit the `pokedex` routes with:
 
  ```shell
 curl -vv -X GET localhost:8080/health_check
@@ -52,6 +52,10 @@ curl -vv -X GET localhost:8080/health_check
 
  ```shell
 curl -vv -X GET localhost:8080/pokemon/mewtwo
+```
+
+ ```shell
+curl -vv -X GET localhost:8080/pokemon/translated/mewtwo
 ```
 
 ## Production API
