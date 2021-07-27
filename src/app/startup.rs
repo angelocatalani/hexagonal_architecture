@@ -52,8 +52,7 @@ impl PokedexApp {
                 .wrap(TracingLogger::default())
         })
         .listen(tcp_listener)
-        .map(HttpServer::run)
-        .map_err(Into::into);
+        .map_or_else(|error| Err(error.into()), |server| Ok(server.run()));
         Ok(PokedexApp { server, port })
     }
 }
