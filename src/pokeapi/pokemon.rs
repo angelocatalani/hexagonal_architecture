@@ -19,7 +19,7 @@ pub type GqlPokemonResponse = gql_pokemon::ResponseData;
 #[serde(rename_all = "camelCase")]
 pub struct Pokemon {
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub(crate) description: Option<String>,
+    description: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     habitat: Option<String>,
     is_legendary: bool,
