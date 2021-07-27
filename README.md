@@ -93,7 +93,7 @@ Our server implements a timeout and proper error handling to avoid waiting/crash
 behave correctly.
 
 However, we could implement a [circuit breaker](https://martinfowler.com/bliki/CircuitBreaker.html)
-to consciously retry the failed request multiple times until returning an error or a valid response.
+to retry reasonably the failed request multiple times until returning an error or a valid response.
 
 ### Telemetry
 
