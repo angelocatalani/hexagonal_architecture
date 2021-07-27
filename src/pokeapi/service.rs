@@ -160,11 +160,14 @@ mod tests {
 
         let service = PokeapiService::new(server.uri().parse().unwrap(), 10).unwrap();
 
-        assert!(service
-            .get_pokemon("any_pokemon".into())
-            .await
-            .unwrap()
-            .is_err());
+        assert_eq!(
+            "Pokemon not found",
+            &service
+                .get_pokemon("any_pokemon".into())
+                .await
+                .unwrap()
+                .unwrap_err()
+        );
     }
 
     #[tokio::test]

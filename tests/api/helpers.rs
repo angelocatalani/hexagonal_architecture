@@ -39,6 +39,7 @@ pub async fn spawn_app() -> TestApp {
 pub struct PokeApiResponseBuilder<'a> {
     habitat_name: &'a str,
     is_legendary: bool,
+    without_pokemon: bool,
 }
 
 impl<'a> PokeApiResponseBuilder<'a> {
@@ -46,6 +47,7 @@ impl<'a> PokeApiResponseBuilder<'a> {
         Self {
             habitat_name: "any_habitat",
             is_legendary: true,
+            without_pokemon: false,
         }
     }
     pub fn with_habitat(&mut self, name: &'a str) -> &mut Self {
@@ -56,27 +58,41 @@ impl<'a> PokeApiResponseBuilder<'a> {
         self.is_legendary = is_legendary;
         self
     }
+    pub fn without_pokemon(&mut self) -> &mut Self {
+        self.without_pokemon = true;
+        self
+    }
     pub fn finish(&self) -> Value {
-        json!(
-            {
-               "data":{
-                  "info":[
-                     {
-                        "name":"any_pokemon",
-                        "habitat":{
-                           "name":self.habitat_name
-                        },
-                        "descriptions":[
-                           {
-                              "flavor_text":"any_description"
-                           }
-                        ],
-                        "is_legendary":self.is_legendary
-                     }
-                  ]
-               }
-            }
-        )
+        if self.without_pokemon {
+            json!(
+                {
+                   "data":{
+                      "info":[]
+                   }
+                }
+            )
+        } else {
+            json!(
+                {
+                   "data":{
+                      "info":[
+                         {
+                            "name":"any_pokemon",
+                            "habitat":{
+                               "name":self.habitat_name
+                            },
+                            "descriptions":[
+                               {
+                                  "flavor_text":"any_description"
+                               }
+                            ],
+                            "is_legendary":self.is_legendary
+                         }
+                      ]
+                   }
+                }
+            )
+        }
     }
 }
 

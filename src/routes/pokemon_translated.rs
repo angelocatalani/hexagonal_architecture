@@ -17,9 +17,7 @@ pub async fn pokemon_translated(
     pokeapi_service: web::Data<PokeapiService>,
     translated_service: web::Data<TranslatedService>,
 ) -> Result<HttpResponse, PokedexError> {
-    let mut pokemon = retrieve_pokemon(name.into_inner(), pokeapi_service)
-        .await
-        .context("Failed to retrieve pokemon")?;
+    let mut pokemon = retrieve_pokemon(name.into_inner(), pokeapi_service).await?;
 
     let translated_description = translate_pokemon_description(translated_service, &pokemon)
         .await
