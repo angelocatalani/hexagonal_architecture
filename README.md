@@ -1,147 +1,115 @@
-# Pokedex
+# Hexagonal Architecture
 
-[![Actions Status](https://github.com/angelocatalani/pok/actions/workflows/main.yml/badge.svg)](https://github.com/angelocatalani/pok/actions)
-[![Actions Status](https://github.com/angelocatalani/pok/actions/workflows/audit.yml/badge.svg)](https://github.com/angelocatalani/pok/actions)
-[![Actions Status](https://github.com/angelocatalani/pok/actions/workflows/scheduled_build.yml/badge.svg)](https://github.com/angelocatalani/pok/actions)
+Notes and proof of concepts about the Hexagonal Architecture in Rust.
 
-# Table of Contents
 
-* [Usage](#usage)
-* [Production API changes](#production-api-changes)
+# Table of contents
+
+* [3-Layer architecture](#3-Layer-architecture)
+* [Hexagonal architecture](#Hexagonal-architecture)
 * [Resources](#resources)
 
-## Usage
 
-First, we need to clone the repo:
+## 3 Layer architecture
 
-```shell
-git clone git@github.com:angelocatalani/newsletter.git
-```
+### Layered Pokedex
 
-and enter the main project directory:
+`Layered Pokedex` is a 3 layer web application.
 
-```shell
-cd pok
-```
+Initially the `translated` endpoint does not support caching.
 
-Secondly, we can run the server inside a local container, with [docker compose](https://docs.docker.com/get-docker/)
+The code is clean and fully tested.
+So far the layered approach has been the best approach.
 
-```shell
-docker compose up
-```
+To implement a caching mechanism with Redis we cannot inject the Redis client,
+inside the `Translated` service because:
+- the resulting code would be difficult to unit-test (how to mock the Redis client).
+- the `Translated` service would have an additional reason to change
 
-The CI builds and pushes on each successful commit the docker image from that commit.
+So, the best approach is to create a cache service that wraps the Redis client.
 
-We can run that image with:
+This means, the `translated` endpoint is in charge of checking and updating the cache.
 
-```shell
-docker run -p 8080:8080 challengepokedex1/pokedex
-```
+For Redis connections we are using multiplexing instead of a connection pool,
+basically for simplicity (avoid adding the `bb8` dependency)
+(https://redis.com/blog/multiplexing-explained/)
 
-Finally, if we [install rustup](https://www.rust-lang.org/tools/install), we can run the server locally with:
+### Drawbacks
 
-```shell
-cargo run --bin pokedex
-```
+#### The SRP is violated
 
-and the tests with:
+If the persistence layer changes, the domain layer also changes.
+Same thing for the presentation layer.
 
-```shell
-cargo test
-```
+#### Promotes database-driven design instead of domain-driven
 
-We can hit the `pokedex` routes with:
+To develop a feature we need to start with the persistence layer.
 
- ```shell
-curl -vv -X GET localhost:8080/health_check
-```
+However, it is the domain that contains the behaviour of the features.
 
- ```shell
-curl -vv -X GET localhost:8080/pokemon/mewtwo
-```
+And the behaviour should be independent of the persistence aspect.
 
- ```shell
-curl -vv -X GET localhost:8080/pokemon/translated/mewtwo
-```
+#### The design does not reflect the natural structure of the business requirements. 
 
-## Production API changes
+The division into presentation, domain and persistence is a technical choice which breaks up cohesive functional units,
+into at least 3 distinct pieces for the corresponding layers.
 
-### PokeApi GraphQL is in beta
+This means a given feature is implemented in 3 different layers instead of a single cohesive unit. 
 
-We used the [PokeApi GraphQL](https://pokeapi.co/docs/graphql) to leverage the graph navigation to search a given
-Pokemon and return only the relevant subset of all the possible fields. This is beneficial for our server since we
-delegate the PokeApi to search and filter a given Pokemon.
+#### Domain logic is difficult to test
 
-However, the [PokeApi GraphQL](https://pokeapi.co/docs/graphql) is in beta and this means it is not stable enough for a
-production environment: it could potentially make some braking changes or have bugs, that could break our server.
+Domain logic depends on the persistence layer without any form of dependency injection.
 
-To improve the stability of our server, we could use instead the [rest endpoint](https://pokeapi.co/docs/v2) that is
-stable.
+This means it is impossible to unit test it, since we need an up and running database.
 
-### Funtranslations has a rate limit
+#### ORM can mix domain and persistence logic
 
-We used the free version of the Funtranslations API that has a limit of 6 requests per hour.
+When using ORM in a layered application, we could end up using for the domain code,
+the ORM classes or adding ORM annotations to our domain classes.
 
-In a production environment we could use the premium version with no limit plus a cache mechanism to avoid requesting
-the same translation multiple times.
+This makes the domain, and the persistence layer even more tightly coupled.
 
-### Circuit Breaker
+## Hexagonal architecture
 
-At the moment our server is directly using synchronous http calls to interact with the PokeAPI and Funtranslations
-endpoints.
+The violation of the SRP principle in the 3-layer architecture is due to the propagation
+of changes from the lower layers to the upper layers.
 
-Our server implements a timeout and proper error handling to avoid waiting/crashing when the external services do not
-behave correctly.
+To stop this change propagation we can use the DIP.
 
-However, we could implement a [circuit breaker](https://martinfowler.com/bliki/CircuitBreaker.html)
-to retry reasonably the failed request multiple times until returning an error or a valid response.
+The behaviour of our business requirement: the core code
+must not depend on external dependencies associated with any kind of integration points.
 
-### Telemetry
+The core code interacts with the external dependencies using interfaces.
+In this way, the core code does not have any outgoing dependencies.
+And all dependencies are towards the core code.
 
-Tracing logs should be stored in immutable database for analysis.
+In terms of hexagonal architecture we have:
+- the hexagon: core code + ports + services
+- adapters
 
-We should also collect other metrics to display such as:
+The ports can be:
+- incoming port (e.g., Use-case, Query): implemented by services (query, use case, ...)
+- outgoing port (e.g., LoadAccountPort)
 
-- number of requests
-- latency of each request
-- cpu/memory usage
+The adapters can be:
+- incoming adapter (e.g., Controller): calls the incoming port, and the concrete implementation is inside the hexagon
+- outgoing adapter (e.g., Repository): implements the outgoing port, and are called by the hexagon
 
-After that, we could set up warning rules to detect problems.
+Incoming ports are the only way to interact with the hexagon.
+Incoming ports are use cases implemented by a service in the hexagon.
+Incoming ports are used by incoming adapters.
 
-### Acceptance/Quality/Load tests
+Outgoing ports are the only way for the hexagon to interact with the integration points.
+Outgoing ports are implemented by outgoing adapters
+Outgoing ports are used by the hexagon (e.g., the service) to interact with the integration points.
 
-We should periodically run automated tests to check the correctness of the entire journey:
+Incoming ports are not implemented by the incoming adapater: they are implemented by the service
+and used by the incoming adapter.
 
-- the external APIs (PokeAPI, Funtranslations) work correctly
-- our routes take no longer than `x` seconds to return a valid response
-
-Finally, we could simulate stress conditions for our server with load tests.
-
-### Rate limit
-
-We could use a simple API token to implement a rate limit for our routes.
-
-In this way, we could mitigate a DOS attack.
-
-### Load balancer and autoscaler
-
-We could use the load balancer to distribute requests across many servers.
-
-We could use the autoscaler to spawn new servers when necessary (e.g., high cpu/memory/#requests)
-
-### Configure CORS for Actix
-
-At the moment our server does not define any CORS policy, and the browsers fall back to the SOP (same origin policy).
-
-For to the front end of our application, it could be necessary to define a CORS policy.
+Outgoing ports are implemented by the outgoing adapter
 
 ## Resources
 
-- [Assignment](https://docs.google.com/document/d/1P5i5AdnnJ7jTpxBJ6vrNGz-yGIT3zl68a94YZKuQovg/edit#)
-
-
-
-
-
-
-
+- [Get Your Hands Dirty on Clean Architecture](https://reflectoring.io/book/)
+- [Buckpal App](https://github.com/thombergs/buckpal)
+- [Reevaluating the Layered Architecture](https://javadevguy.wordpress.com/2019/01/06/reevaluating-the-layered-architecture/)

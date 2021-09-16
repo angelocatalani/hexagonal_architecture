@@ -1,13 +1,14 @@
 use actix_web::{web, HttpResponse};
 use anyhow::Context;
 
+use crate::cache::CacheService;
 use crate::pokeapi::{PokeapiService, Pokemon};
 use crate::routes::errors::PokedexError;
 use crate::translated::TranslatedService;
 
 #[tracing::instrument(
 name = "Getting pokemon with translated description",
-skip(name, pokeapi_service, translated_service),
+skip(name, pokeapi_service, translated_service,cache_service),
 fields(
 pokemon_name = % name.as_str(),
 )
@@ -16,19 +17,31 @@ pub async fn pokemon_translated(
     name: web::Path<String>,
     pokeapi_service: web::Data<PokeapiService>,
     translated_service: web::Data<TranslatedService>,
+    cache_service: web::Data<CacheService>,
 ) -> Result<HttpResponse, PokedexError> {
-    let mut pokemon = retrieve_pokemon(name.into_inner(), pokeapi_service).await?;
+    let pokemon_name = name.into_inner();
+    let mut pokemon = retrieve_pokemon(pokemon_name.clone(), pokeapi_service).await?;
 
-    let translated_description = translate_pokemon_description(translated_service, &pokemon)
-        .await
-        .context("Failed to translate pokemon description");
-
-    match translated_description {
-        Ok(description) => {
-            pokemon.set_description(description);
-            Ok(HttpResponse::Ok().json(&pokemon))
+    // todo: refactor
+    if let Ok(description) = cache_service.get(&pokemon_name).await {
+        pokemon.set_description(description);
+        Ok(HttpResponse::Ok().json(&pokemon))
+    } else {
+        let translated_description = translate_pokemon_description(translated_service, &pokemon)
+            .await
+            .context("Failed to translate pokemon description");
+        match translated_description {
+            Ok(description) => {
+                cache_service
+                    .set(&pokemon_name, description.as_deref())
+                    .await
+                    .map_err(|_| tracing::warn!("Failed to update redis cache"))
+                    .ok();
+                pokemon.set_description(description);
+                Ok(HttpResponse::Ok().json(&pokemon))
+            }
+            Err(_) => Ok(HttpResponse::Ok().json(&pokemon)),
         }
-        Err(_) => Ok(HttpResponse::Ok().json(&pokemon)),
     }
 }
 
