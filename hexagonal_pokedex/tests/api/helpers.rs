@@ -2,7 +2,7 @@ use reqwest::Response;
 use serde_json::{json, Value};
 use wiremock::MockServer;
 
-use layered_pokedex::{load_configuration, setup_tracing, PokedexApp};
+use hexagonal_pokedex::{load_configuration, setup_tracing, PokedexApp};
 
 lazy_static::lazy_static! {
  static ref TRACING: () = setup_tracing("test".into(),"debug".into());

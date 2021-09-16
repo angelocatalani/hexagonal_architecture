@@ -1,5 +1,5 @@
 [package]
-name = "layered_pokedex"
+name = "hexagonal_pokedex"
 version = "0.1.0"
 authors = ["angelocat <catalaniangelo@gmail.com>"]
 edition = "2018"

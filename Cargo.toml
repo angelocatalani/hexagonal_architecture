@@ -1,5 +1,6 @@
 [workspace]
 
 members = [
-    "layered_pokedex"
+    "layered_pokedex",
+    "hexagonal_pokedex"
 ]

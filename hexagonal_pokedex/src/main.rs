@@ -1,6 +1,6 @@
 use anyhow::Context;
 
-use layered_pokedex::{load_configuration, setup_tracing, PokedexApp};
+use hexagonal_pokedex::{load_configuration, setup_tracing, PokedexApp};
 
 #[actix_web::main]
 async fn main() -> anyhow::Result<()> {

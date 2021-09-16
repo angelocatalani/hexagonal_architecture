@@ -40,7 +40,7 @@ impl Settings {
 /// # Examples
 ///
 /// ```rust
-/// use layered_pokedex::load_configuration;
+/// use hexagonal_pokedex::load_configuration;
 ///
 /// assert!(load_configuration().is_ok());
 /// ```

@@ -919,6 +919,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "hexagonal_pokedex"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-web",
+ "anyhow",
+ "config 0.11.0",
+ "graphql_client",
+ "lazy_static",
+ "reqwest",
+ "serde 1.0.130",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tracing",
+ "tracing-actix-web",
+ "tracing-bunyan-formatter",
+ "tracing-futures",
+ "tracing-subscriber",
+ "wiremock",
+]
+
+[[package]]
 name = "http"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1083,6 +1106,29 @@ name = "language-tags"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d4345964bb142484797b161f473a503a434de77149dd8c7427788c6e13379388"
+
+[[package]]
+name = "layered_pokedex"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-web",
+ "anyhow",
+ "config 0.11.0",
+ "graphql_client",
+ "lazy_static",
+ "reqwest",
+ "serde 1.0.130",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tracing",
+ "tracing-actix-web",
+ "tracing-bunyan-formatter",
+ "tracing-futures",
+ "tracing-subscriber",
+ "wiremock",
+]
 
 [[package]]
 name = "lazy_static"
@@ -1372,29 +1418,6 @@ name = "pin-utils"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8b870d8c151b6f2fb93e84a13146138f05d02ed11c7e7c54f8826aaaf7c9f184"
-
-[[package]]
-name = "pok"
-version = "0.1.0"
-dependencies = [
- "actix-rt",
- "actix-web",
- "anyhow",
- "config 0.11.0",
- "graphql_client",
- "lazy_static",
- "reqwest",
- "serde 1.0.130",
- "serde_json",
- "thiserror",
- "tokio",
- "tracing",
- "tracing-actix-web",
- "tracing-bunyan-formatter",
- "tracing-futures",
- "tracing-subscriber",
- "wiremock",
-]
 
 [[package]]
 name = "ppv-lite86"
