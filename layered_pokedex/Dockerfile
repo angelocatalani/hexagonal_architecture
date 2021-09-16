@@ -1,7 +1,7 @@
 # compute a lock-like file for our project
 FROM lukemathwalker/cargo-chef as planner
 WORKDIR app
-COPY . .
+COPY .. .
 RUN cargo chef prepare  --recipe-path recipe.json
 
 # build only the  project dependencies
@@ -15,7 +15,7 @@ FROM rust:1.52 AS builder
 WORKDIR app
 COPY --from=cacher /app/target target
 COPY --from=cacher /usr/local/cargo /usr/local/cargo
-COPY . .
+COPY .. .
 
 RUN cargo build --release --bin pokedex
 

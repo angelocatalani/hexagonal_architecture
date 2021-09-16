@@ -2,6 +2,6 @@ version: "3"
 
 services:
   pokedex:
-    build: .
+    build: ..
     ports:
       - 8080:8080
