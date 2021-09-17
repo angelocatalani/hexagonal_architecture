@@ -48295,7 +48295,7 @@ input pokemon_v2_versionname_variance_order_by {
 type query_root {
     """
     fetch data from the table: "pokemon_v2_ability"
-  """
+    """
     pokemon_v2_ability(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_ability_select_column!]
@@ -48315,7 +48315,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_ability"
-  """
+    """
     pokemon_v2_ability_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_ability_select_column!]
@@ -48340,7 +48340,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_abilitychange"
-  """
+    """
     pokemon_v2_abilitychange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychange_select_column!]
@@ -48360,7 +48360,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilitychange"
-  """
+    """
     pokemon_v2_abilitychange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychange_select_column!]
@@ -48385,7 +48385,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_abilitychangeeffecttext"
-  """
+    """
     pokemon_v2_abilitychangeeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychangeeffecttext_select_column!]
@@ -48405,7 +48405,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilitychangeeffecttext"
-  """
+    """
     pokemon_v2_abilitychangeeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychangeeffecttext_select_column!]
@@ -48430,7 +48430,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_abilityeffecttext"
-  """
+    """
     pokemon_v2_abilityeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityeffecttext_select_column!]
@@ -48450,7 +48450,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilityeffecttext"
-  """
+    """
     pokemon_v2_abilityeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityeffecttext_select_column!]
@@ -48475,7 +48475,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_abilityflavortext"
-  """
+    """
     pokemon_v2_abilityflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityflavortext_select_column!]
@@ -48495,7 +48495,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilityflavortext"
-  """
+    """
     pokemon_v2_abilityflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityflavortext_select_column!]
@@ -48520,7 +48520,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_abilityname"
-  """
+    """
     pokemon_v2_abilityname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityname_select_column!]
@@ -48540,7 +48540,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilityname"
-  """
+    """
     pokemon_v2_abilityname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityname_select_column!]
@@ -48565,7 +48565,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_berry"
-  """
+    """
     pokemon_v2_berry(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berry_select_column!]
@@ -48585,7 +48585,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berry"
-  """
+    """
     pokemon_v2_berry_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berry_select_column!]
@@ -48610,7 +48610,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_berryfirmness"
-  """
+    """
     pokemon_v2_berryfirmness(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmness_select_column!]
@@ -48630,7 +48630,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryfirmness"
-  """
+    """
     pokemon_v2_berryfirmness_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmness_select_column!]
@@ -48655,7 +48655,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_berryfirmnessname"
-  """
+    """
     pokemon_v2_berryfirmnessname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmnessname_select_column!]
@@ -48675,7 +48675,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryfirmnessname"
-  """
+    """
     pokemon_v2_berryfirmnessname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmnessname_select_column!]
@@ -48700,7 +48700,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_berryflavor"
-  """
+    """
     pokemon_v2_berryflavor(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavor_select_column!]
@@ -48720,7 +48720,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryflavor"
-  """
+    """
     pokemon_v2_berryflavor_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavor_select_column!]
@@ -48745,7 +48745,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_berryflavormap"
-  """
+    """
     pokemon_v2_berryflavormap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavormap_select_column!]
@@ -48765,7 +48765,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryflavormap"
-  """
+    """
     pokemon_v2_berryflavormap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavormap_select_column!]
@@ -48790,7 +48790,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_berryflavorname"
-  """
+    """
     pokemon_v2_berryflavorname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavorname_select_column!]
@@ -48810,7 +48810,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryflavorname"
-  """
+    """
     pokemon_v2_berryflavorname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavorname_select_column!]
@@ -48835,7 +48835,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_characteristic"
-  """
+    """
     pokemon_v2_characteristic(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristic_select_column!]
@@ -48855,7 +48855,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_characteristic"
-  """
+    """
     pokemon_v2_characteristic_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristic_select_column!]
@@ -48880,7 +48880,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_characteristicdescription"
-  """
+    """
     pokemon_v2_characteristicdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristicdescription_select_column!]
@@ -48900,7 +48900,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_characteristicdescription"
-  """
+    """
     pokemon_v2_characteristicdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristicdescription_select_column!]
@@ -48925,7 +48925,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_contestcombo"
-  """
+    """
     pokemon_v2_contestcombo(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contestcombo_select_column!]
@@ -48945,7 +48945,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contestcombo"
-  """
+    """
     pokemon_v2_contestcombo_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contestcombo_select_column!]
@@ -48970,7 +48970,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_contesteffect"
-  """
+    """
     pokemon_v2_contesteffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffect_select_column!]
@@ -48990,7 +48990,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesteffect"
-  """
+    """
     pokemon_v2_contesteffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffect_select_column!]
@@ -49015,7 +49015,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_contesteffecteffecttext"
-  """
+    """
     pokemon_v2_contesteffecteffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffecteffecttext_select_column!]
@@ -49035,7 +49035,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesteffecteffecttext"
-  """
+    """
     pokemon_v2_contesteffecteffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffecteffecttext_select_column!]
@@ -49060,7 +49060,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_contesteffectflavortext"
-  """
+    """
     pokemon_v2_contesteffectflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffectflavortext_select_column!]
@@ -49080,7 +49080,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesteffectflavortext"
-  """
+    """
     pokemon_v2_contesteffectflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffectflavortext_select_column!]
@@ -49105,7 +49105,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_contesttype"
-  """
+    """
     pokemon_v2_contesttype(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttype_select_column!]
@@ -49125,7 +49125,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesttype"
-  """
+    """
     pokemon_v2_contesttype_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttype_select_column!]
@@ -49150,7 +49150,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_contesttypename"
-  """
+    """
     pokemon_v2_contesttypename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttypename_select_column!]
@@ -49170,7 +49170,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesttypename"
-  """
+    """
     pokemon_v2_contesttypename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttypename_select_column!]
@@ -49195,7 +49195,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_egggroup"
-  """
+    """
     pokemon_v2_egggroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroup_select_column!]
@@ -49215,7 +49215,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_egggroup"
-  """
+    """
     pokemon_v2_egggroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroup_select_column!]
@@ -49240,7 +49240,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_egggroupname"
-  """
+    """
     pokemon_v2_egggroupname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroupname_select_column!]
@@ -49260,7 +49260,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_egggroupname"
-  """
+    """
     pokemon_v2_egggroupname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroupname_select_column!]
@@ -49285,7 +49285,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encounter"
-  """
+    """
     pokemon_v2_encounter(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounter_select_column!]
@@ -49305,7 +49305,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounter"
-  """
+    """
     pokemon_v2_encounter_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounter_select_column!]
@@ -49330,7 +49330,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encountercondition"
-  """
+    """
     pokemon_v2_encountercondition(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountercondition_select_column!]
@@ -49350,7 +49350,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encountercondition"
-  """
+    """
     pokemon_v2_encountercondition_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountercondition_select_column!]
@@ -49375,7 +49375,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionname"
-  """
+    """
     pokemon_v2_encounterconditionname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionname_select_column!]
@@ -49395,7 +49395,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionname"
-  """
+    """
     pokemon_v2_encounterconditionname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionname_select_column!]
@@ -49420,7 +49420,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionvalue"
-  """
+    """
     pokemon_v2_encounterconditionvalue(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvalue_select_column!]
@@ -49440,7 +49440,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionvalue"
-  """
+    """
     pokemon_v2_encounterconditionvalue_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvalue_select_column!]
@@ -49465,7 +49465,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionvaluemap"
-  """
+    """
     pokemon_v2_encounterconditionvaluemap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluemap_select_column!]
@@ -49485,7 +49485,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionvaluemap"
-  """
+    """
     pokemon_v2_encounterconditionvaluemap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluemap_select_column!]
@@ -49510,7 +49510,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionvaluename"
-  """
+    """
     pokemon_v2_encounterconditionvaluename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluename_select_column!]
@@ -49530,7 +49530,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionvaluename"
-  """
+    """
     pokemon_v2_encounterconditionvaluename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluename_select_column!]
@@ -49555,7 +49555,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encountermethod"
-  """
+    """
     pokemon_v2_encountermethod(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethod_select_column!]
@@ -49575,7 +49575,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encountermethod"
-  """
+    """
     pokemon_v2_encountermethod_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethod_select_column!]
@@ -49600,7 +49600,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encountermethodname"
-  """
+    """
     pokemon_v2_encountermethodname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethodname_select_column!]
@@ -49620,7 +49620,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encountermethodname"
-  """
+    """
     pokemon_v2_encountermethodname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethodname_select_column!]
@@ -49645,7 +49645,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterslot"
-  """
+    """
     pokemon_v2_encounterslot(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterslot_select_column!]
@@ -49665,7 +49665,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterslot"
-  """
+    """
     pokemon_v2_encounterslot_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterslot_select_column!]
@@ -49690,7 +49690,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_evolutionchain"
-  """
+    """
     pokemon_v2_evolutionchain(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutionchain_select_column!]
@@ -49710,7 +49710,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_evolutionchain"
-  """
+    """
     pokemon_v2_evolutionchain_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutionchain_select_column!]
@@ -49735,7 +49735,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_evolutiontrigger"
-  """
+    """
     pokemon_v2_evolutiontrigger(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontrigger_select_column!]
@@ -49755,7 +49755,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_evolutiontrigger"
-  """
+    """
     pokemon_v2_evolutiontrigger_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontrigger_select_column!]
@@ -49780,7 +49780,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_evolutiontriggername"
-  """
+    """
     pokemon_v2_evolutiontriggername(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontriggername_select_column!]
@@ -49800,7 +49800,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_evolutiontriggername"
-  """
+    """
     pokemon_v2_evolutiontriggername_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontriggername_select_column!]
@@ -49825,7 +49825,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_experience"
-  """
+    """
     pokemon_v2_experience(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_experience_select_column!]
@@ -49845,7 +49845,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_experience"
-  """
+    """
     pokemon_v2_experience_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_experience_select_column!]
@@ -49870,7 +49870,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_gender"
-  """
+    """
     pokemon_v2_gender(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_gender_select_column!]
@@ -49890,7 +49890,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_gender"
-  """
+    """
     pokemon_v2_gender_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_gender_select_column!]
@@ -49915,7 +49915,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_generation"
-  """
+    """
     pokemon_v2_generation(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generation_select_column!]
@@ -49935,7 +49935,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_generation"
-  """
+    """
     pokemon_v2_generation_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generation_select_column!]
@@ -49960,7 +49960,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_generationname"
-  """
+    """
     pokemon_v2_generationname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generationname_select_column!]
@@ -49980,7 +49980,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_generationname"
-  """
+    """
     pokemon_v2_generationname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generationname_select_column!]
@@ -50005,7 +50005,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_growthrate"
-  """
+    """
     pokemon_v2_growthrate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthrate_select_column!]
@@ -50025,7 +50025,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_growthrate"
-  """
+    """
     pokemon_v2_growthrate_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthrate_select_column!]
@@ -50050,7 +50050,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_growthratedescription"
-  """
+    """
     pokemon_v2_growthratedescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthratedescription_select_column!]
@@ -50070,7 +50070,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_growthratedescription"
-  """
+    """
     pokemon_v2_growthratedescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthratedescription_select_column!]
@@ -50095,7 +50095,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_item"
-  """
+    """
     pokemon_v2_item(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_item_select_column!]
@@ -50115,7 +50115,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_item"
-  """
+    """
     pokemon_v2_item_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_item_select_column!]
@@ -50138,7 +50138,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattribute"
-  """
+    """
     pokemon_v2_itemattribute(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattribute_select_column!]
@@ -50158,7 +50158,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattribute"
-  """
+    """
     pokemon_v2_itemattribute_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattribute_select_column!]
@@ -50183,7 +50183,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattributedescription"
-  """
+    """
     pokemon_v2_itemattributedescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributedescription_select_column!]
@@ -50203,7 +50203,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattributedescription"
-  """
+    """
     pokemon_v2_itemattributedescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributedescription_select_column!]
@@ -50228,7 +50228,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattributemap"
-  """
+    """
     pokemon_v2_itemattributemap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributemap_select_column!]
@@ -50248,7 +50248,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattributemap"
-  """
+    """
     pokemon_v2_itemattributemap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributemap_select_column!]
@@ -50273,7 +50273,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattributename"
-  """
+    """
     pokemon_v2_itemattributename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributename_select_column!]
@@ -50293,7 +50293,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattributename"
-  """
+    """
     pokemon_v2_itemattributename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributename_select_column!]
@@ -50318,7 +50318,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemcategory"
-  """
+    """
     pokemon_v2_itemcategory(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategory_select_column!]
@@ -50338,7 +50338,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemcategory"
-  """
+    """
     pokemon_v2_itemcategory_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategory_select_column!]
@@ -50363,7 +50363,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemcategoryname"
-  """
+    """
     pokemon_v2_itemcategoryname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategoryname_select_column!]
@@ -50383,7 +50383,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemcategoryname"
-  """
+    """
     pokemon_v2_itemcategoryname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategoryname_select_column!]
@@ -50408,7 +50408,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemeffecttext"
-  """
+    """
     pokemon_v2_itemeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemeffecttext_select_column!]
@@ -50428,7 +50428,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemeffecttext"
-  """
+    """
     pokemon_v2_itemeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemeffecttext_select_column!]
@@ -50453,7 +50453,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemflavortext"
-  """
+    """
     pokemon_v2_itemflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflavortext_select_column!]
@@ -50473,7 +50473,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemflavortext"
-  """
+    """
     pokemon_v2_itemflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflavortext_select_column!]
@@ -50498,7 +50498,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemflingeffect"
-  """
+    """
     pokemon_v2_itemflingeffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffect_select_column!]
@@ -50518,7 +50518,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemflingeffect"
-  """
+    """
     pokemon_v2_itemflingeffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffect_select_column!]
@@ -50543,7 +50543,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemflingeffecteffecttext"
-  """
+    """
     pokemon_v2_itemflingeffecteffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffecteffecttext_select_column!]
@@ -50563,7 +50563,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemflingeffecteffecttext"
-  """
+    """
     pokemon_v2_itemflingeffecteffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffecteffecttext_select_column!]
@@ -50588,7 +50588,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemgameindex"
-  """
+    """
     pokemon_v2_itemgameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemgameindex_select_column!]
@@ -50608,7 +50608,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemgameindex"
-  """
+    """
     pokemon_v2_itemgameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemgameindex_select_column!]
@@ -50633,7 +50633,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itemname"
-  """
+    """
     pokemon_v2_itemname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemname_select_column!]
@@ -50653,7 +50653,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemname"
-  """
+    """
     pokemon_v2_itemname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemname_select_column!]
@@ -50678,7 +50678,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itempocket"
-  """
+    """
     pokemon_v2_itempocket(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocket_select_column!]
@@ -50698,7 +50698,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itempocket"
-  """
+    """
     pokemon_v2_itempocket_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocket_select_column!]
@@ -50723,7 +50723,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_itempocketname"
-  """
+    """
     pokemon_v2_itempocketname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocketname_select_column!]
@@ -50743,7 +50743,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itempocketname"
-  """
+    """
     pokemon_v2_itempocketname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocketname_select_column!]
@@ -50809,7 +50809,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_language"
-  """
+    """
     pokemon_v2_language(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_language_select_column!]
@@ -50829,7 +50829,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_language"
-  """
+    """
     pokemon_v2_language_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_language_select_column!]
@@ -50854,7 +50854,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_languagename"
-  """
+    """
     pokemon_v2_languagename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_languagename_select_column!]
@@ -50874,7 +50874,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_languagename"
-  """
+    """
     pokemon_v2_languagename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_languagename_select_column!]
@@ -50899,7 +50899,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_location"
-  """
+    """
     pokemon_v2_location(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_location_select_column!]
@@ -50919,7 +50919,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_location"
-  """
+    """
     pokemon_v2_location_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_location_select_column!]
@@ -50944,7 +50944,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_locationarea"
-  """
+    """
     pokemon_v2_locationarea(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationarea_select_column!]
@@ -50964,7 +50964,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationarea"
-  """
+    """
     pokemon_v2_locationarea_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationarea_select_column!]
@@ -50989,7 +50989,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_locationareaencounterrate"
-  """
+    """
     pokemon_v2_locationareaencounterrate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaencounterrate_select_column!]
@@ -51009,7 +51009,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationareaencounterrate"
-  """
+    """
     pokemon_v2_locationareaencounterrate_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaencounterrate_select_column!]
@@ -51034,7 +51034,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_locationareaname"
-  """
+    """
     pokemon_v2_locationareaname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaname_select_column!]
@@ -51054,7 +51054,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationareaname"
-  """
+    """
     pokemon_v2_locationareaname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaname_select_column!]
@@ -51079,7 +51079,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_locationgameindex"
-  """
+    """
     pokemon_v2_locationgameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationgameindex_select_column!]
@@ -51099,7 +51099,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationgameindex"
-  """
+    """
     pokemon_v2_locationgameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationgameindex_select_column!]
@@ -51124,7 +51124,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_locationname"
-  """
+    """
     pokemon_v2_locationname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationname_select_column!]
@@ -51144,7 +51144,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationname"
-  """
+    """
     pokemon_v2_locationname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationname_select_column!]
@@ -51169,7 +51169,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_machine"
-  """
+    """
     pokemon_v2_machine(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_machine_select_column!]
@@ -51189,7 +51189,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_machine"
-  """
+    """
     pokemon_v2_machine_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_machine_select_column!]
@@ -51214,7 +51214,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_move"
-  """
+    """
     pokemon_v2_move(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_move_select_column!]
@@ -51234,7 +51234,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_move"
-  """
+    """
     pokemon_v2_move_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_move_select_column!]
@@ -51257,7 +51257,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattribute"
-  """
+    """
     pokemon_v2_moveattribute(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattribute_select_column!]
@@ -51277,7 +51277,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattribute"
-  """
+    """
     pokemon_v2_moveattribute_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattribute_select_column!]
@@ -51302,7 +51302,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattributedescription"
-  """
+    """
     pokemon_v2_moveattributedescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributedescription_select_column!]
@@ -51322,7 +51322,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattributedescription"
-  """
+    """
     pokemon_v2_moveattributedescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributedescription_select_column!]
@@ -51347,7 +51347,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattributemap"
-  """
+    """
     pokemon_v2_moveattributemap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributemap_select_column!]
@@ -51367,7 +51367,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattributemap"
-  """
+    """
     pokemon_v2_moveattributemap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributemap_select_column!]
@@ -51392,7 +51392,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattributename"
-  """
+    """
     pokemon_v2_moveattributename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributename_select_column!]
@@ -51412,7 +51412,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattributename"
-  """
+    """
     pokemon_v2_moveattributename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributename_select_column!]
@@ -51437,7 +51437,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movebattlestyle"
-  """
+    """
     pokemon_v2_movebattlestyle(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestyle_select_column!]
@@ -51457,7 +51457,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movebattlestyle"
-  """
+    """
     pokemon_v2_movebattlestyle_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestyle_select_column!]
@@ -51482,7 +51482,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movebattlestylename"
-  """
+    """
     pokemon_v2_movebattlestylename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestylename_select_column!]
@@ -51502,7 +51502,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movebattlestylename"
-  """
+    """
     pokemon_v2_movebattlestylename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestylename_select_column!]
@@ -51527,7 +51527,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movechange"
-  """
+    """
     pokemon_v2_movechange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movechange_select_column!]
@@ -51547,7 +51547,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movechange"
-  """
+    """
     pokemon_v2_movechange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movechange_select_column!]
@@ -51572,7 +51572,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movedamageclass"
-  """
+    """
     pokemon_v2_movedamageclass(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclass_select_column!]
@@ -51592,7 +51592,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movedamageclass"
-  """
+    """
     pokemon_v2_movedamageclass_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclass_select_column!]
@@ -51617,7 +51617,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movedamageclassdescription"
-  """
+    """
     pokemon_v2_movedamageclassdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassdescription_select_column!]
@@ -51637,7 +51637,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movedamageclassdescription"
-  """
+    """
     pokemon_v2_movedamageclassdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassdescription_select_column!]
@@ -51662,7 +51662,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movedamageclassname"
-  """
+    """
     pokemon_v2_movedamageclassname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassname_select_column!]
@@ -51682,7 +51682,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movedamageclassname"
-  """
+    """
     pokemon_v2_movedamageclassname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassname_select_column!]
@@ -51707,7 +51707,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffect"
-  """
+    """
     pokemon_v2_moveeffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffect_select_column!]
@@ -51727,7 +51727,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffect"
-  """
+    """
     pokemon_v2_moveeffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffect_select_column!]
@@ -51752,7 +51752,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffectchange"
-  """
+    """
     pokemon_v2_moveeffectchange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchange_select_column!]
@@ -51772,7 +51772,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffectchange"
-  """
+    """
     pokemon_v2_moveeffectchange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchange_select_column!]
@@ -51797,7 +51797,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffectchangeeffecttext"
-  """
+    """
     pokemon_v2_moveeffectchangeeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchangeeffecttext_select_column!]
@@ -51817,7 +51817,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffectchangeeffecttext"
-  """
+    """
     pokemon_v2_moveeffectchangeeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchangeeffecttext_select_column!]
@@ -51842,7 +51842,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffecteffecttext"
-  """
+    """
     pokemon_v2_moveeffecteffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffecteffecttext_select_column!]
@@ -51862,7 +51862,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffecteffecttext"
-  """
+    """
     pokemon_v2_moveeffecteffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffecteffecttext_select_column!]
@@ -51887,7 +51887,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_moveflavortext"
-  """
+    """
     pokemon_v2_moveflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveflavortext_select_column!]
@@ -51907,7 +51907,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveflavortext"
-  """
+    """
     pokemon_v2_moveflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveflavortext_select_column!]
@@ -51932,7 +51932,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movelearnmethod"
-  """
+    """
     pokemon_v2_movelearnmethod(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethod_select_column!]
@@ -51952,7 +51952,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movelearnmethod"
-  """
+    """
     pokemon_v2_movelearnmethod_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethod_select_column!]
@@ -51977,7 +51977,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movelearnmethoddescription"
-  """
+    """
     pokemon_v2_movelearnmethoddescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethoddescription_select_column!]
@@ -51997,7 +51997,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movelearnmethoddescription"
-  """
+    """
     pokemon_v2_movelearnmethoddescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethoddescription_select_column!]
@@ -52022,7 +52022,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movelearnmethodname"
-  """
+    """
     pokemon_v2_movelearnmethodname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethodname_select_column!]
@@ -52042,7 +52042,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movelearnmethodname"
-  """
+    """
     pokemon_v2_movelearnmethodname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethodname_select_column!]
@@ -52108,7 +52108,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetaailment"
-  """
+    """
     pokemon_v2_movemetaailment(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailment_select_column!]
@@ -52128,7 +52128,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetaailment"
-  """
+    """
     pokemon_v2_movemetaailment_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailment_select_column!]
@@ -52153,7 +52153,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetaailmentname"
-  """
+    """
     pokemon_v2_movemetaailmentname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailmentname_select_column!]
@@ -52173,7 +52173,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetaailmentname"
-  """
+    """
     pokemon_v2_movemetaailmentname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailmentname_select_column!]
@@ -52198,7 +52198,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetacategory"
-  """
+    """
     pokemon_v2_movemetacategory(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategory_select_column!]
@@ -52218,7 +52218,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetacategory"
-  """
+    """
     pokemon_v2_movemetacategory_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategory_select_column!]
@@ -52243,7 +52243,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetacategorydescription"
-  """
+    """
     pokemon_v2_movemetacategorydescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategorydescription_select_column!]
@@ -52263,7 +52263,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetacategorydescription"
-  """
+    """
     pokemon_v2_movemetacategorydescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategorydescription_select_column!]
@@ -52288,7 +52288,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetastatchange"
-  """
+    """
     pokemon_v2_movemetastatchange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetastatchange_select_column!]
@@ -52308,7 +52308,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetastatchange"
-  """
+    """
     pokemon_v2_movemetastatchange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetastatchange_select_column!]
@@ -52333,7 +52333,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movename"
-  """
+    """
     pokemon_v2_movename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movename_select_column!]
@@ -52353,7 +52353,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movename"
-  """
+    """
     pokemon_v2_movename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movename_select_column!]
@@ -52378,7 +52378,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movetarget"
-  """
+    """
     pokemon_v2_movetarget(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetarget_select_column!]
@@ -52398,7 +52398,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movetarget"
-  """
+    """
     pokemon_v2_movetarget_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetarget_select_column!]
@@ -52423,7 +52423,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movetargetdescription"
-  """
+    """
     pokemon_v2_movetargetdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetdescription_select_column!]
@@ -52443,7 +52443,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movetargetdescription"
-  """
+    """
     pokemon_v2_movetargetdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetdescription_select_column!]
@@ -52468,7 +52468,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_movetargetname"
-  """
+    """
     pokemon_v2_movetargetname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetname_select_column!]
@@ -52488,7 +52488,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movetargetname"
-  """
+    """
     pokemon_v2_movetargetname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetname_select_column!]
@@ -52513,7 +52513,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_nature"
-  """
+    """
     pokemon_v2_nature(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_nature_select_column!]
@@ -52533,7 +52533,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_nature"
-  """
+    """
     pokemon_v2_nature_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_nature_select_column!]
@@ -52558,7 +52558,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_naturebattlestylepreference"
-  """
+    """
     pokemon_v2_naturebattlestylepreference(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturebattlestylepreference_select_column!]
@@ -52578,7 +52578,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_naturebattlestylepreference"
-  """
+    """
     pokemon_v2_naturebattlestylepreference_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturebattlestylepreference_select_column!]
@@ -52603,7 +52603,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_naturename"
-  """
+    """
     pokemon_v2_naturename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturename_select_column!]
@@ -52623,7 +52623,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_naturename"
-  """
+    """
     pokemon_v2_naturename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturename_select_column!]
@@ -52648,7 +52648,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_naturepokeathlonstat"
-  """
+    """
     pokemon_v2_naturepokeathlonstat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturepokeathlonstat_select_column!]
@@ -52668,7 +52668,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_naturepokeathlonstat"
-  """
+    """
     pokemon_v2_naturepokeathlonstat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturepokeathlonstat_select_column!]
@@ -52693,7 +52693,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_palpark"
-  """
+    """
     pokemon_v2_palpark(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palpark_select_column!]
@@ -52713,7 +52713,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_palpark"
-  """
+    """
     pokemon_v2_palpark_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palpark_select_column!]
@@ -52738,7 +52738,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_palparkarea"
-  """
+    """
     pokemon_v2_palparkarea(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkarea_select_column!]
@@ -52758,7 +52758,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_palparkarea"
-  """
+    """
     pokemon_v2_palparkarea_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkarea_select_column!]
@@ -52783,7 +52783,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_palparkareaname"
-  """
+    """
     pokemon_v2_palparkareaname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkareaname_select_column!]
@@ -52803,7 +52803,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_palparkareaname"
-  """
+    """
     pokemon_v2_palparkareaname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkareaname_select_column!]
@@ -52828,7 +52828,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokeathlonstat"
-  """
+    """
     pokemon_v2_pokeathlonstat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstat_select_column!]
@@ -52848,7 +52848,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokeathlonstat"
-  """
+    """
     pokemon_v2_pokeathlonstat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstat_select_column!]
@@ -52873,7 +52873,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokeathlonstatname"
-  """
+    """
     pokemon_v2_pokeathlonstatname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstatname_select_column!]
@@ -52893,7 +52893,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokeathlonstatname"
-  """
+    """
     pokemon_v2_pokeathlonstatname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstatname_select_column!]
@@ -52918,7 +52918,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedex"
-  """
+    """
     pokemon_v2_pokedex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedex_select_column!]
@@ -52938,7 +52938,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedex"
-  """
+    """
     pokemon_v2_pokedex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedex_select_column!]
@@ -52963,7 +52963,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedexdescription"
-  """
+    """
     pokemon_v2_pokedexdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexdescription_select_column!]
@@ -52983,7 +52983,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedexdescription"
-  """
+    """
     pokemon_v2_pokedexdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexdescription_select_column!]
@@ -53008,7 +53008,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedexname"
-  """
+    """
     pokemon_v2_pokedexname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexname_select_column!]
@@ -53028,7 +53028,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedexname"
-  """
+    """
     pokemon_v2_pokedexname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexname_select_column!]
@@ -53053,7 +53053,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedexversiongroup"
-  """
+    """
     pokemon_v2_pokedexversiongroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexversiongroup_select_column!]
@@ -53073,7 +53073,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedexversiongroup"
-  """
+    """
     pokemon_v2_pokedexversiongroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexversiongroup_select_column!]
@@ -53098,7 +53098,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemon"
-  """
+    """
     pokemon_v2_pokemon(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemon_select_column!]
@@ -53118,7 +53118,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemon"
-  """
+    """
     pokemon_v2_pokemon_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemon_select_column!]
@@ -53143,7 +53143,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonability"
-  """
+    """
     pokemon_v2_pokemonability(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonability_select_column!]
@@ -53163,7 +53163,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonability"
-  """
+    """
     pokemon_v2_pokemonability_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonability_select_column!]
@@ -53188,7 +53188,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemoncolor"
-  """
+    """
     pokemon_v2_pokemoncolor(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolor_select_column!]
@@ -53208,7 +53208,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemoncolor"
-  """
+    """
     pokemon_v2_pokemoncolor_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolor_select_column!]
@@ -53233,7 +53233,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemoncolorname"
-  """
+    """
     pokemon_v2_pokemoncolorname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolorname_select_column!]
@@ -53253,7 +53253,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemoncolorname"
-  """
+    """
     pokemon_v2_pokemoncolorname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolorname_select_column!]
@@ -53278,7 +53278,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemondexnumber"
-  """
+    """
     pokemon_v2_pokemondexnumber(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemondexnumber_select_column!]
@@ -53298,7 +53298,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemondexnumber"
-  """
+    """
     pokemon_v2_pokemondexnumber_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemondexnumber_select_column!]
@@ -53323,7 +53323,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonegggroup"
-  """
+    """
     pokemon_v2_pokemonegggroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonegggroup_select_column!]
@@ -53343,7 +53343,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonegggroup"
-  """
+    """
     pokemon_v2_pokemonegggroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonegggroup_select_column!]
@@ -53368,7 +53368,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonevolution"
-  """
+    """
     pokemon_v2_pokemonevolution(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonevolution_select_column!]
@@ -53388,7 +53388,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonevolution"
-  """
+    """
     pokemon_v2_pokemonevolution_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonevolution_select_column!]
@@ -53413,7 +53413,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonform"
-  """
+    """
     pokemon_v2_pokemonform(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonform_select_column!]
@@ -53433,7 +53433,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonform"
-  """
+    """
     pokemon_v2_pokemonform_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonform_select_column!]
@@ -53458,7 +53458,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonformgeneration"
-  """
+    """
     pokemon_v2_pokemonformgeneration(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformgeneration_select_column!]
@@ -53478,7 +53478,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonformgeneration"
-  """
+    """
     pokemon_v2_pokemonformgeneration_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformgeneration_select_column!]
@@ -53503,7 +53503,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonformname"
-  """
+    """
     pokemon_v2_pokemonformname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformname_select_column!]
@@ -53523,7 +53523,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonformname"
-  """
+    """
     pokemon_v2_pokemonformname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformname_select_column!]
@@ -53589,7 +53589,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonformtype"
-  """
+    """
     pokemon_v2_pokemonformtype(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformtype_select_column!]
@@ -53609,7 +53609,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonformtype"
-  """
+    """
     pokemon_v2_pokemonformtype_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformtype_select_column!]
@@ -53634,7 +53634,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemongameindex"
-  """
+    """
     pokemon_v2_pokemongameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemongameindex_select_column!]
@@ -53654,7 +53654,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemongameindex"
-  """
+    """
     pokemon_v2_pokemongameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemongameindex_select_column!]
@@ -53679,7 +53679,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonhabitat"
-  """
+    """
     pokemon_v2_pokemonhabitat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitat_select_column!]
@@ -53699,7 +53699,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonhabitat"
-  """
+    """
     pokemon_v2_pokemonhabitat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitat_select_column!]
@@ -53724,7 +53724,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonhabitatname"
-  """
+    """
     pokemon_v2_pokemonhabitatname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitatname_select_column!]
@@ -53744,7 +53744,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonhabitatname"
-  """
+    """
     pokemon_v2_pokemonhabitatname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitatname_select_column!]
@@ -53769,7 +53769,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonitem"
-  """
+    """
     pokemon_v2_pokemonitem(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonitem_select_column!]
@@ -53789,7 +53789,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonitem"
-  """
+    """
     pokemon_v2_pokemonitem_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonitem_select_column!]
@@ -53814,7 +53814,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonmove"
-  """
+    """
     pokemon_v2_pokemonmove(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonmove_select_column!]
@@ -53834,7 +53834,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonmove"
-  """
+    """
     pokemon_v2_pokemonmove_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonmove_select_column!]
@@ -53859,7 +53859,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonshape"
-  """
+    """
     pokemon_v2_pokemonshape(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshape_select_column!]
@@ -53879,7 +53879,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonshape"
-  """
+    """
     pokemon_v2_pokemonshape_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshape_select_column!]
@@ -53904,7 +53904,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonshapename"
-  """
+    """
     pokemon_v2_pokemonshapename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshapename_select_column!]
@@ -53924,7 +53924,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonshapename"
-  """
+    """
     pokemon_v2_pokemonshapename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshapename_select_column!]
@@ -53990,7 +53990,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonspeciesdescription"
-  """
+    """
     pokemon_v2_pokemonspeciesdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesdescription_select_column!]
@@ -54010,7 +54010,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonspeciesdescription"
-  """
+    """
     pokemon_v2_pokemonspeciesdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesdescription_select_column!]
@@ -54035,7 +54035,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonspeciesflavortext"
-  """
+    """
     pokemon_v2_pokemonspeciesflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesflavortext_select_column!]
@@ -54055,7 +54055,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonspeciesflavortext"
-  """
+    """
     pokemon_v2_pokemonspeciesflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesflavortext_select_column!]
@@ -54080,7 +54080,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonspeciesname"
-  """
+    """
     pokemon_v2_pokemonspeciesname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesname_select_column!]
@@ -54100,7 +54100,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonspeciesname"
-  """
+    """
     pokemon_v2_pokemonspeciesname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesname_select_column!]
@@ -54166,7 +54166,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonstat"
-  """
+    """
     pokemon_v2_pokemonstat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonstat_select_column!]
@@ -54186,7 +54186,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonstat"
-  """
+    """
     pokemon_v2_pokemonstat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonstat_select_column!]
@@ -54211,7 +54211,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemontype"
-  """
+    """
     pokemon_v2_pokemontype(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontype_select_column!]
@@ -54231,7 +54231,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemontype"
-  """
+    """
     pokemon_v2_pokemontype_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontype_select_column!]
@@ -54256,7 +54256,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemontypepast"
-  """
+    """
     pokemon_v2_pokemontypepast(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontypepast_select_column!]
@@ -54276,7 +54276,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemontypepast"
-  """
+    """
     pokemon_v2_pokemontypepast_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontypepast_select_column!]
@@ -54301,7 +54301,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_region"
-  """
+    """
     pokemon_v2_region(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_region_select_column!]
@@ -54321,7 +54321,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_region"
-  """
+    """
     pokemon_v2_region_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_region_select_column!]
@@ -54346,7 +54346,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_regionname"
-  """
+    """
     pokemon_v2_regionname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_regionname_select_column!]
@@ -54366,7 +54366,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_regionname"
-  """
+    """
     pokemon_v2_regionname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_regionname_select_column!]
@@ -54391,7 +54391,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_stat"
-  """
+    """
     pokemon_v2_stat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_stat_select_column!]
@@ -54411,7 +54411,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_stat"
-  """
+    """
     pokemon_v2_stat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_stat_select_column!]
@@ -54434,7 +54434,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_statname"
-  """
+    """
     pokemon_v2_statname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_statname_select_column!]
@@ -54454,7 +54454,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_statname"
-  """
+    """
     pokemon_v2_statname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_statname_select_column!]
@@ -54479,7 +54479,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_supercontestcombo"
-  """
+    """
     pokemon_v2_supercontestcombo(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontestcombo_select_column!]
@@ -54499,7 +54499,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_supercontestcombo"
-  """
+    """
     pokemon_v2_supercontestcombo_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontestcombo_select_column!]
@@ -54524,7 +54524,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_supercontesteffect"
-  """
+    """
     pokemon_v2_supercontesteffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffect_select_column!]
@@ -54544,7 +54544,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_supercontesteffect"
-  """
+    """
     pokemon_v2_supercontesteffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffect_select_column!]
@@ -54569,7 +54569,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_supercontesteffectflavortext"
-  """
+    """
     pokemon_v2_supercontesteffectflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffectflavortext_select_column!]
@@ -54589,7 +54589,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_supercontesteffectflavortext"
-  """
+    """
     pokemon_v2_supercontesteffectflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffectflavortext_select_column!]
@@ -54614,7 +54614,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_type"
-  """
+    """
     pokemon_v2_type(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_type_select_column!]
@@ -54634,7 +54634,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_type"
-  """
+    """
     pokemon_v2_type_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_type_select_column!]
@@ -54657,7 +54657,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_typeefficacy"
-  """
+    """
     pokemon_v2_typeefficacy(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typeefficacy_select_column!]
@@ -54677,7 +54677,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_typeefficacy"
-  """
+    """
     pokemon_v2_typeefficacy_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typeefficacy_select_column!]
@@ -54702,7 +54702,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_typegameindex"
-  """
+    """
     pokemon_v2_typegameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typegameindex_select_column!]
@@ -54722,7 +54722,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_typegameindex"
-  """
+    """
     pokemon_v2_typegameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typegameindex_select_column!]
@@ -54747,7 +54747,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_typename"
-  """
+    """
     pokemon_v2_typename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typename_select_column!]
@@ -54767,7 +54767,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_typename"
-  """
+    """
     pokemon_v2_typename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typename_select_column!]
@@ -54792,7 +54792,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_version"
-  """
+    """
     pokemon_v2_version(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_version_select_column!]
@@ -54812,7 +54812,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_version"
-  """
+    """
     pokemon_v2_version_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_version_select_column!]
@@ -54837,7 +54837,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_versiongroup"
-  """
+    """
     pokemon_v2_versiongroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroup_select_column!]
@@ -54857,7 +54857,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versiongroup"
-  """
+    """
     pokemon_v2_versiongroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroup_select_column!]
@@ -54882,7 +54882,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_versiongroupmovelearnmethod"
-  """
+    """
     pokemon_v2_versiongroupmovelearnmethod(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupmovelearnmethod_select_column!]
@@ -54902,7 +54902,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versiongroupmovelearnmethod"
-  """
+    """
     pokemon_v2_versiongroupmovelearnmethod_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupmovelearnmethod_select_column!]
@@ -54927,7 +54927,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_versiongroupregion"
-  """
+    """
     pokemon_v2_versiongroupregion(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupregion_select_column!]
@@ -54947,7 +54947,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versiongroupregion"
-  """
+    """
     pokemon_v2_versiongroupregion_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupregion_select_column!]
@@ -54972,7 +54972,7 @@ type query_root {
 
     """
     fetch data from the table: "pokemon_v2_versionname"
-  """
+    """
     pokemon_v2_versionname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versionname_select_column!]
@@ -54992,7 +54992,7 @@ type query_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versionname"
-  """
+    """
     pokemon_v2_versionname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versionname_select_column!]
@@ -55072,7 +55072,7 @@ input String_comparison_exp {
 type subscription_root {
     """
     fetch data from the table: "pokemon_v2_ability"
-  """
+    """
     pokemon_v2_ability(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_ability_select_column!]
@@ -55092,7 +55092,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_ability"
-  """
+    """
     pokemon_v2_ability_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_ability_select_column!]
@@ -55117,7 +55117,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_abilitychange"
-  """
+    """
     pokemon_v2_abilitychange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychange_select_column!]
@@ -55137,7 +55137,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilitychange"
-  """
+    """
     pokemon_v2_abilitychange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychange_select_column!]
@@ -55162,7 +55162,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_abilitychangeeffecttext"
-  """
+    """
     pokemon_v2_abilitychangeeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychangeeffecttext_select_column!]
@@ -55182,7 +55182,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilitychangeeffecttext"
-  """
+    """
     pokemon_v2_abilitychangeeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilitychangeeffecttext_select_column!]
@@ -55207,7 +55207,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_abilityeffecttext"
-  """
+    """
     pokemon_v2_abilityeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityeffecttext_select_column!]
@@ -55227,7 +55227,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilityeffecttext"
-  """
+    """
     pokemon_v2_abilityeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityeffecttext_select_column!]
@@ -55252,7 +55252,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_abilityflavortext"
-  """
+    """
     pokemon_v2_abilityflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityflavortext_select_column!]
@@ -55272,7 +55272,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilityflavortext"
-  """
+    """
     pokemon_v2_abilityflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityflavortext_select_column!]
@@ -55297,7 +55297,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_abilityname"
-  """
+    """
     pokemon_v2_abilityname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityname_select_column!]
@@ -55317,7 +55317,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_abilityname"
-  """
+    """
     pokemon_v2_abilityname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_abilityname_select_column!]
@@ -55342,7 +55342,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_berry"
-  """
+    """
     pokemon_v2_berry(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berry_select_column!]
@@ -55362,7 +55362,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berry"
-  """
+    """
     pokemon_v2_berry_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berry_select_column!]
@@ -55387,7 +55387,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_berryfirmness"
-  """
+    """
     pokemon_v2_berryfirmness(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmness_select_column!]
@@ -55407,7 +55407,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryfirmness"
-  """
+    """
     pokemon_v2_berryfirmness_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmness_select_column!]
@@ -55432,7 +55432,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_berryfirmnessname"
-  """
+    """
     pokemon_v2_berryfirmnessname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmnessname_select_column!]
@@ -55452,7 +55452,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryfirmnessname"
-  """
+    """
     pokemon_v2_berryfirmnessname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryfirmnessname_select_column!]
@@ -55477,7 +55477,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_berryflavor"
-  """
+    """
     pokemon_v2_berryflavor(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavor_select_column!]
@@ -55497,7 +55497,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryflavor"
-  """
+    """
     pokemon_v2_berryflavor_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavor_select_column!]
@@ -55522,7 +55522,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_berryflavormap"
-  """
+    """
     pokemon_v2_berryflavormap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavormap_select_column!]
@@ -55542,7 +55542,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryflavormap"
-  """
+    """
     pokemon_v2_berryflavormap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavormap_select_column!]
@@ -55567,7 +55567,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_berryflavorname"
-  """
+    """
     pokemon_v2_berryflavorname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavorname_select_column!]
@@ -55587,7 +55587,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_berryflavorname"
-  """
+    """
     pokemon_v2_berryflavorname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_berryflavorname_select_column!]
@@ -55612,7 +55612,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_characteristic"
-  """
+    """
     pokemon_v2_characteristic(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristic_select_column!]
@@ -55632,7 +55632,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_characteristic"
-  """
+    """
     pokemon_v2_characteristic_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristic_select_column!]
@@ -55657,7 +55657,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_characteristicdescription"
-  """
+    """
     pokemon_v2_characteristicdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristicdescription_select_column!]
@@ -55677,7 +55677,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_characteristicdescription"
-  """
+    """
     pokemon_v2_characteristicdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_characteristicdescription_select_column!]
@@ -55702,7 +55702,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_contestcombo"
-  """
+    """
     pokemon_v2_contestcombo(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contestcombo_select_column!]
@@ -55722,7 +55722,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contestcombo"
-  """
+    """
     pokemon_v2_contestcombo_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contestcombo_select_column!]
@@ -55747,7 +55747,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_contesteffect"
-  """
+    """
     pokemon_v2_contesteffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffect_select_column!]
@@ -55767,7 +55767,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesteffect"
-  """
+    """
     pokemon_v2_contesteffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffect_select_column!]
@@ -55792,7 +55792,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_contesteffecteffecttext"
-  """
+    """
     pokemon_v2_contesteffecteffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffecteffecttext_select_column!]
@@ -55812,7 +55812,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesteffecteffecttext"
-  """
+    """
     pokemon_v2_contesteffecteffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffecteffecttext_select_column!]
@@ -55837,7 +55837,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_contesteffectflavortext"
-  """
+    """
     pokemon_v2_contesteffectflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffectflavortext_select_column!]
@@ -55857,7 +55857,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesteffectflavortext"
-  """
+    """
     pokemon_v2_contesteffectflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesteffectflavortext_select_column!]
@@ -55882,7 +55882,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_contesttype"
-  """
+    """
     pokemon_v2_contesttype(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttype_select_column!]
@@ -55902,7 +55902,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesttype"
-  """
+    """
     pokemon_v2_contesttype_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttype_select_column!]
@@ -55927,7 +55927,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_contesttypename"
-  """
+    """
     pokemon_v2_contesttypename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttypename_select_column!]
@@ -55947,7 +55947,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_contesttypename"
-  """
+    """
     pokemon_v2_contesttypename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_contesttypename_select_column!]
@@ -55972,7 +55972,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_egggroup"
-  """
+    """
     pokemon_v2_egggroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroup_select_column!]
@@ -55992,7 +55992,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_egggroup"
-  """
+    """
     pokemon_v2_egggroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroup_select_column!]
@@ -56017,7 +56017,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_egggroupname"
-  """
+    """
     pokemon_v2_egggroupname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroupname_select_column!]
@@ -56037,7 +56037,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_egggroupname"
-  """
+    """
     pokemon_v2_egggroupname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_egggroupname_select_column!]
@@ -56062,7 +56062,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encounter"
-  """
+    """
     pokemon_v2_encounter(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounter_select_column!]
@@ -56082,7 +56082,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounter"
-  """
+    """
     pokemon_v2_encounter_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounter_select_column!]
@@ -56107,7 +56107,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encountercondition"
-  """
+    """
     pokemon_v2_encountercondition(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountercondition_select_column!]
@@ -56127,7 +56127,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encountercondition"
-  """
+    """
     pokemon_v2_encountercondition_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountercondition_select_column!]
@@ -56152,7 +56152,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionname"
-  """
+    """
     pokemon_v2_encounterconditionname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionname_select_column!]
@@ -56172,7 +56172,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionname"
-  """
+    """
     pokemon_v2_encounterconditionname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionname_select_column!]
@@ -56197,7 +56197,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionvalue"
-  """
+    """
     pokemon_v2_encounterconditionvalue(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvalue_select_column!]
@@ -56217,7 +56217,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionvalue"
-  """
+    """
     pokemon_v2_encounterconditionvalue_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvalue_select_column!]
@@ -56242,7 +56242,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionvaluemap"
-  """
+    """
     pokemon_v2_encounterconditionvaluemap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluemap_select_column!]
@@ -56262,7 +56262,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionvaluemap"
-  """
+    """
     pokemon_v2_encounterconditionvaluemap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluemap_select_column!]
@@ -56287,7 +56287,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterconditionvaluename"
-  """
+    """
     pokemon_v2_encounterconditionvaluename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluename_select_column!]
@@ -56307,7 +56307,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterconditionvaluename"
-  """
+    """
     pokemon_v2_encounterconditionvaluename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterconditionvaluename_select_column!]
@@ -56332,7 +56332,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encountermethod"
-  """
+    """
     pokemon_v2_encountermethod(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethod_select_column!]
@@ -56352,7 +56352,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encountermethod"
-  """
+    """
     pokemon_v2_encountermethod_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethod_select_column!]
@@ -56377,7 +56377,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encountermethodname"
-  """
+    """
     pokemon_v2_encountermethodname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethodname_select_column!]
@@ -56397,7 +56397,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encountermethodname"
-  """
+    """
     pokemon_v2_encountermethodname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encountermethodname_select_column!]
@@ -56422,7 +56422,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_encounterslot"
-  """
+    """
     pokemon_v2_encounterslot(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterslot_select_column!]
@@ -56442,7 +56442,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_encounterslot"
-  """
+    """
     pokemon_v2_encounterslot_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_encounterslot_select_column!]
@@ -56467,7 +56467,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_evolutionchain"
-  """
+    """
     pokemon_v2_evolutionchain(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutionchain_select_column!]
@@ -56487,7 +56487,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_evolutionchain"
-  """
+    """
     pokemon_v2_evolutionchain_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutionchain_select_column!]
@@ -56512,7 +56512,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_evolutiontrigger"
-  """
+    """
     pokemon_v2_evolutiontrigger(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontrigger_select_column!]
@@ -56532,7 +56532,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_evolutiontrigger"
-  """
+    """
     pokemon_v2_evolutiontrigger_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontrigger_select_column!]
@@ -56557,7 +56557,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_evolutiontriggername"
-  """
+    """
     pokemon_v2_evolutiontriggername(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontriggername_select_column!]
@@ -56577,7 +56577,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_evolutiontriggername"
-  """
+    """
     pokemon_v2_evolutiontriggername_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_evolutiontriggername_select_column!]
@@ -56602,7 +56602,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_experience"
-  """
+    """
     pokemon_v2_experience(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_experience_select_column!]
@@ -56622,7 +56622,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_experience"
-  """
+    """
     pokemon_v2_experience_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_experience_select_column!]
@@ -56647,7 +56647,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_gender"
-  """
+    """
     pokemon_v2_gender(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_gender_select_column!]
@@ -56667,7 +56667,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_gender"
-  """
+    """
     pokemon_v2_gender_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_gender_select_column!]
@@ -56692,7 +56692,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_generation"
-  """
+    """
     pokemon_v2_generation(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generation_select_column!]
@@ -56712,7 +56712,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_generation"
-  """
+    """
     pokemon_v2_generation_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generation_select_column!]
@@ -56737,7 +56737,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_generationname"
-  """
+    """
     pokemon_v2_generationname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generationname_select_column!]
@@ -56757,7 +56757,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_generationname"
-  """
+    """
     pokemon_v2_generationname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_generationname_select_column!]
@@ -56782,7 +56782,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_growthrate"
-  """
+    """
     pokemon_v2_growthrate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthrate_select_column!]
@@ -56802,7 +56802,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_growthrate"
-  """
+    """
     pokemon_v2_growthrate_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthrate_select_column!]
@@ -56827,7 +56827,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_growthratedescription"
-  """
+    """
     pokemon_v2_growthratedescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthratedescription_select_column!]
@@ -56847,7 +56847,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_growthratedescription"
-  """
+    """
     pokemon_v2_growthratedescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_growthratedescription_select_column!]
@@ -56872,7 +56872,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_item"
-  """
+    """
     pokemon_v2_item(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_item_select_column!]
@@ -56892,7 +56892,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_item"
-  """
+    """
     pokemon_v2_item_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_item_select_column!]
@@ -56915,7 +56915,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattribute"
-  """
+    """
     pokemon_v2_itemattribute(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattribute_select_column!]
@@ -56935,7 +56935,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattribute"
-  """
+    """
     pokemon_v2_itemattribute_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattribute_select_column!]
@@ -56960,7 +56960,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattributedescription"
-  """
+    """
     pokemon_v2_itemattributedescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributedescription_select_column!]
@@ -56980,7 +56980,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattributedescription"
-  """
+    """
     pokemon_v2_itemattributedescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributedescription_select_column!]
@@ -57005,7 +57005,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattributemap"
-  """
+    """
     pokemon_v2_itemattributemap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributemap_select_column!]
@@ -57025,7 +57025,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattributemap"
-  """
+    """
     pokemon_v2_itemattributemap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributemap_select_column!]
@@ -57050,7 +57050,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemattributename"
-  """
+    """
     pokemon_v2_itemattributename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributename_select_column!]
@@ -57070,7 +57070,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemattributename"
-  """
+    """
     pokemon_v2_itemattributename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemattributename_select_column!]
@@ -57095,7 +57095,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemcategory"
-  """
+    """
     pokemon_v2_itemcategory(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategory_select_column!]
@@ -57115,7 +57115,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemcategory"
-  """
+    """
     pokemon_v2_itemcategory_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategory_select_column!]
@@ -57140,7 +57140,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemcategoryname"
-  """
+    """
     pokemon_v2_itemcategoryname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategoryname_select_column!]
@@ -57160,7 +57160,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemcategoryname"
-  """
+    """
     pokemon_v2_itemcategoryname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemcategoryname_select_column!]
@@ -57185,7 +57185,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemeffecttext"
-  """
+    """
     pokemon_v2_itemeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemeffecttext_select_column!]
@@ -57205,7 +57205,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemeffecttext"
-  """
+    """
     pokemon_v2_itemeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemeffecttext_select_column!]
@@ -57230,7 +57230,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemflavortext"
-  """
+    """
     pokemon_v2_itemflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflavortext_select_column!]
@@ -57250,7 +57250,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemflavortext"
-  """
+    """
     pokemon_v2_itemflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflavortext_select_column!]
@@ -57275,7 +57275,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemflingeffect"
-  """
+    """
     pokemon_v2_itemflingeffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffect_select_column!]
@@ -57295,7 +57295,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemflingeffect"
-  """
+    """
     pokemon_v2_itemflingeffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffect_select_column!]
@@ -57320,7 +57320,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemflingeffecteffecttext"
-  """
+    """
     pokemon_v2_itemflingeffecteffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffecteffecttext_select_column!]
@@ -57340,7 +57340,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemflingeffecteffecttext"
-  """
+    """
     pokemon_v2_itemflingeffecteffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemflingeffecteffecttext_select_column!]
@@ -57365,7 +57365,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemgameindex"
-  """
+    """
     pokemon_v2_itemgameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemgameindex_select_column!]
@@ -57385,7 +57385,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemgameindex"
-  """
+    """
     pokemon_v2_itemgameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemgameindex_select_column!]
@@ -57410,7 +57410,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itemname"
-  """
+    """
     pokemon_v2_itemname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemname_select_column!]
@@ -57430,7 +57430,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itemname"
-  """
+    """
     pokemon_v2_itemname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itemname_select_column!]
@@ -57455,7 +57455,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itempocket"
-  """
+    """
     pokemon_v2_itempocket(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocket_select_column!]
@@ -57475,7 +57475,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itempocket"
-  """
+    """
     pokemon_v2_itempocket_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocket_select_column!]
@@ -57500,7 +57500,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_itempocketname"
-  """
+    """
     pokemon_v2_itempocketname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocketname_select_column!]
@@ -57520,7 +57520,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_itempocketname"
-  """
+    """
     pokemon_v2_itempocketname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_itempocketname_select_column!]
@@ -57586,7 +57586,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_language"
-  """
+    """
     pokemon_v2_language(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_language_select_column!]
@@ -57606,7 +57606,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_language"
-  """
+    """
     pokemon_v2_language_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_language_select_column!]
@@ -57631,7 +57631,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_languagename"
-  """
+    """
     pokemon_v2_languagename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_languagename_select_column!]
@@ -57651,7 +57651,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_languagename"
-  """
+    """
     pokemon_v2_languagename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_languagename_select_column!]
@@ -57676,7 +57676,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_location"
-  """
+    """
     pokemon_v2_location(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_location_select_column!]
@@ -57696,7 +57696,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_location"
-  """
+    """
     pokemon_v2_location_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_location_select_column!]
@@ -57721,7 +57721,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_locationarea"
-  """
+    """
     pokemon_v2_locationarea(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationarea_select_column!]
@@ -57741,7 +57741,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationarea"
-  """
+    """
     pokemon_v2_locationarea_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationarea_select_column!]
@@ -57766,7 +57766,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_locationareaencounterrate"
-  """
+    """
     pokemon_v2_locationareaencounterrate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaencounterrate_select_column!]
@@ -57786,7 +57786,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationareaencounterrate"
-  """
+    """
     pokemon_v2_locationareaencounterrate_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaencounterrate_select_column!]
@@ -57811,7 +57811,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_locationareaname"
-  """
+    """
     pokemon_v2_locationareaname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaname_select_column!]
@@ -57831,7 +57831,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationareaname"
-  """
+    """
     pokemon_v2_locationareaname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationareaname_select_column!]
@@ -57856,7 +57856,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_locationgameindex"
-  """
+    """
     pokemon_v2_locationgameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationgameindex_select_column!]
@@ -57876,7 +57876,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationgameindex"
-  """
+    """
     pokemon_v2_locationgameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationgameindex_select_column!]
@@ -57901,7 +57901,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_locationname"
-  """
+    """
     pokemon_v2_locationname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationname_select_column!]
@@ -57921,7 +57921,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_locationname"
-  """
+    """
     pokemon_v2_locationname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_locationname_select_column!]
@@ -57946,7 +57946,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_machine"
-  """
+    """
     pokemon_v2_machine(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_machine_select_column!]
@@ -57966,7 +57966,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_machine"
-  """
+    """
     pokemon_v2_machine_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_machine_select_column!]
@@ -57991,7 +57991,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_move"
-  """
+    """
     pokemon_v2_move(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_move_select_column!]
@@ -58011,7 +58011,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_move"
-  """
+    """
     pokemon_v2_move_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_move_select_column!]
@@ -58034,7 +58034,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattribute"
-  """
+    """
     pokemon_v2_moveattribute(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattribute_select_column!]
@@ -58054,7 +58054,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattribute"
-  """
+    """
     pokemon_v2_moveattribute_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattribute_select_column!]
@@ -58079,7 +58079,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattributedescription"
-  """
+    """
     pokemon_v2_moveattributedescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributedescription_select_column!]
@@ -58099,7 +58099,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattributedescription"
-  """
+    """
     pokemon_v2_moveattributedescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributedescription_select_column!]
@@ -58124,7 +58124,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattributemap"
-  """
+    """
     pokemon_v2_moveattributemap(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributemap_select_column!]
@@ -58144,7 +58144,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattributemap"
-  """
+    """
     pokemon_v2_moveattributemap_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributemap_select_column!]
@@ -58169,7 +58169,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveattributename"
-  """
+    """
     pokemon_v2_moveattributename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributename_select_column!]
@@ -58189,7 +58189,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveattributename"
-  """
+    """
     pokemon_v2_moveattributename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveattributename_select_column!]
@@ -58214,7 +58214,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movebattlestyle"
-  """
+    """
     pokemon_v2_movebattlestyle(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestyle_select_column!]
@@ -58234,7 +58234,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movebattlestyle"
-  """
+    """
     pokemon_v2_movebattlestyle_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestyle_select_column!]
@@ -58259,7 +58259,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movebattlestylename"
-  """
+    """
     pokemon_v2_movebattlestylename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestylename_select_column!]
@@ -58279,7 +58279,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movebattlestylename"
-  """
+    """
     pokemon_v2_movebattlestylename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movebattlestylename_select_column!]
@@ -58304,7 +58304,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movechange"
-  """
+    """
     pokemon_v2_movechange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movechange_select_column!]
@@ -58324,7 +58324,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movechange"
-  """
+    """
     pokemon_v2_movechange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movechange_select_column!]
@@ -58349,7 +58349,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movedamageclass"
-  """
+    """
     pokemon_v2_movedamageclass(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclass_select_column!]
@@ -58369,7 +58369,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movedamageclass"
-  """
+    """
     pokemon_v2_movedamageclass_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclass_select_column!]
@@ -58394,7 +58394,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movedamageclassdescription"
-  """
+    """
     pokemon_v2_movedamageclassdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassdescription_select_column!]
@@ -58414,7 +58414,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movedamageclassdescription"
-  """
+    """
     pokemon_v2_movedamageclassdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassdescription_select_column!]
@@ -58439,7 +58439,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movedamageclassname"
-  """
+    """
     pokemon_v2_movedamageclassname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassname_select_column!]
@@ -58459,7 +58459,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movedamageclassname"
-  """
+    """
     pokemon_v2_movedamageclassname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movedamageclassname_select_column!]
@@ -58484,7 +58484,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffect"
-  """
+    """
     pokemon_v2_moveeffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffect_select_column!]
@@ -58504,7 +58504,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffect"
-  """
+    """
     pokemon_v2_moveeffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffect_select_column!]
@@ -58529,7 +58529,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffectchange"
-  """
+    """
     pokemon_v2_moveeffectchange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchange_select_column!]
@@ -58549,7 +58549,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffectchange"
-  """
+    """
     pokemon_v2_moveeffectchange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchange_select_column!]
@@ -58574,7 +58574,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffectchangeeffecttext"
-  """
+    """
     pokemon_v2_moveeffectchangeeffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchangeeffecttext_select_column!]
@@ -58594,7 +58594,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffectchangeeffecttext"
-  """
+    """
     pokemon_v2_moveeffectchangeeffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffectchangeeffecttext_select_column!]
@@ -58619,7 +58619,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveeffecteffecttext"
-  """
+    """
     pokemon_v2_moveeffecteffecttext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffecteffecttext_select_column!]
@@ -58639,7 +58639,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveeffecteffecttext"
-  """
+    """
     pokemon_v2_moveeffecteffecttext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveeffecteffecttext_select_column!]
@@ -58664,7 +58664,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_moveflavortext"
-  """
+    """
     pokemon_v2_moveflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveflavortext_select_column!]
@@ -58684,7 +58684,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_moveflavortext"
-  """
+    """
     pokemon_v2_moveflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_moveflavortext_select_column!]
@@ -58709,7 +58709,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movelearnmethod"
-  """
+    """
     pokemon_v2_movelearnmethod(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethod_select_column!]
@@ -58729,7 +58729,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movelearnmethod"
-  """
+    """
     pokemon_v2_movelearnmethod_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethod_select_column!]
@@ -58754,7 +58754,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movelearnmethoddescription"
-  """
+    """
     pokemon_v2_movelearnmethoddescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethoddescription_select_column!]
@@ -58774,7 +58774,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movelearnmethoddescription"
-  """
+    """
     pokemon_v2_movelearnmethoddescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethoddescription_select_column!]
@@ -58799,7 +58799,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movelearnmethodname"
-  """
+    """
     pokemon_v2_movelearnmethodname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethodname_select_column!]
@@ -58819,7 +58819,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movelearnmethodname"
-  """
+    """
     pokemon_v2_movelearnmethodname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movelearnmethodname_select_column!]
@@ -58885,7 +58885,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetaailment"
-  """
+    """
     pokemon_v2_movemetaailment(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailment_select_column!]
@@ -58905,7 +58905,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetaailment"
-  """
+    """
     pokemon_v2_movemetaailment_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailment_select_column!]
@@ -58930,7 +58930,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetaailmentname"
-  """
+    """
     pokemon_v2_movemetaailmentname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailmentname_select_column!]
@@ -58950,7 +58950,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetaailmentname"
-  """
+    """
     pokemon_v2_movemetaailmentname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetaailmentname_select_column!]
@@ -58975,7 +58975,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetacategory"
-  """
+    """
     pokemon_v2_movemetacategory(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategory_select_column!]
@@ -58995,7 +58995,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetacategory"
-  """
+    """
     pokemon_v2_movemetacategory_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategory_select_column!]
@@ -59020,7 +59020,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetacategorydescription"
-  """
+    """
     pokemon_v2_movemetacategorydescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategorydescription_select_column!]
@@ -59040,7 +59040,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetacategorydescription"
-  """
+    """
     pokemon_v2_movemetacategorydescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetacategorydescription_select_column!]
@@ -59065,7 +59065,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movemetastatchange"
-  """
+    """
     pokemon_v2_movemetastatchange(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetastatchange_select_column!]
@@ -59085,7 +59085,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movemetastatchange"
-  """
+    """
     pokemon_v2_movemetastatchange_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movemetastatchange_select_column!]
@@ -59110,7 +59110,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movename"
-  """
+    """
     pokemon_v2_movename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movename_select_column!]
@@ -59130,7 +59130,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movename"
-  """
+    """
     pokemon_v2_movename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movename_select_column!]
@@ -59155,7 +59155,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movetarget"
-  """
+    """
     pokemon_v2_movetarget(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetarget_select_column!]
@@ -59175,7 +59175,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movetarget"
-  """
+    """
     pokemon_v2_movetarget_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetarget_select_column!]
@@ -59200,7 +59200,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movetargetdescription"
-  """
+    """
     pokemon_v2_movetargetdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetdescription_select_column!]
@@ -59220,7 +59220,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movetargetdescription"
-  """
+    """
     pokemon_v2_movetargetdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetdescription_select_column!]
@@ -59245,7 +59245,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_movetargetname"
-  """
+    """
     pokemon_v2_movetargetname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetname_select_column!]
@@ -59265,7 +59265,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_movetargetname"
-  """
+    """
     pokemon_v2_movetargetname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_movetargetname_select_column!]
@@ -59290,7 +59290,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_nature"
-  """
+    """
     pokemon_v2_nature(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_nature_select_column!]
@@ -59310,7 +59310,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_nature"
-  """
+    """
     pokemon_v2_nature_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_nature_select_column!]
@@ -59335,7 +59335,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_naturebattlestylepreference"
-  """
+    """
     pokemon_v2_naturebattlestylepreference(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturebattlestylepreference_select_column!]
@@ -59355,7 +59355,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_naturebattlestylepreference"
-  """
+    """
     pokemon_v2_naturebattlestylepreference_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturebattlestylepreference_select_column!]
@@ -59380,7 +59380,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_naturename"
-  """
+    """
     pokemon_v2_naturename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturename_select_column!]
@@ -59400,7 +59400,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_naturename"
-  """
+    """
     pokemon_v2_naturename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturename_select_column!]
@@ -59425,7 +59425,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_naturepokeathlonstat"
-  """
+    """
     pokemon_v2_naturepokeathlonstat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturepokeathlonstat_select_column!]
@@ -59445,7 +59445,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_naturepokeathlonstat"
-  """
+    """
     pokemon_v2_naturepokeathlonstat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_naturepokeathlonstat_select_column!]
@@ -59470,7 +59470,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_palpark"
-  """
+    """
     pokemon_v2_palpark(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palpark_select_column!]
@@ -59490,7 +59490,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_palpark"
-  """
+    """
     pokemon_v2_palpark_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palpark_select_column!]
@@ -59515,7 +59515,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_palparkarea"
-  """
+    """
     pokemon_v2_palparkarea(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkarea_select_column!]
@@ -59535,7 +59535,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_palparkarea"
-  """
+    """
     pokemon_v2_palparkarea_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkarea_select_column!]
@@ -59560,7 +59560,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_palparkareaname"
-  """
+    """
     pokemon_v2_palparkareaname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkareaname_select_column!]
@@ -59580,7 +59580,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_palparkareaname"
-  """
+    """
     pokemon_v2_palparkareaname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_palparkareaname_select_column!]
@@ -59605,7 +59605,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokeathlonstat"
-  """
+    """
     pokemon_v2_pokeathlonstat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstat_select_column!]
@@ -59625,7 +59625,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokeathlonstat"
-  """
+    """
     pokemon_v2_pokeathlonstat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstat_select_column!]
@@ -59650,7 +59650,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokeathlonstatname"
-  """
+    """
     pokemon_v2_pokeathlonstatname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstatname_select_column!]
@@ -59670,7 +59670,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokeathlonstatname"
-  """
+    """
     pokemon_v2_pokeathlonstatname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokeathlonstatname_select_column!]
@@ -59695,7 +59695,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedex"
-  """
+    """
     pokemon_v2_pokedex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedex_select_column!]
@@ -59715,7 +59715,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedex"
-  """
+    """
     pokemon_v2_pokedex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedex_select_column!]
@@ -59740,7 +59740,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedexdescription"
-  """
+    """
     pokemon_v2_pokedexdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexdescription_select_column!]
@@ -59760,7 +59760,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedexdescription"
-  """
+    """
     pokemon_v2_pokedexdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexdescription_select_column!]
@@ -59785,7 +59785,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedexname"
-  """
+    """
     pokemon_v2_pokedexname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexname_select_column!]
@@ -59805,7 +59805,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedexname"
-  """
+    """
     pokemon_v2_pokedexname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexname_select_column!]
@@ -59830,7 +59830,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokedexversiongroup"
-  """
+    """
     pokemon_v2_pokedexversiongroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexversiongroup_select_column!]
@@ -59850,7 +59850,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokedexversiongroup"
-  """
+    """
     pokemon_v2_pokedexversiongroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokedexversiongroup_select_column!]
@@ -59875,7 +59875,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemon"
-  """
+    """
     pokemon_v2_pokemon(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemon_select_column!]
@@ -59895,7 +59895,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemon"
-  """
+    """
     pokemon_v2_pokemon_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemon_select_column!]
@@ -59920,7 +59920,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonability"
-  """
+    """
     pokemon_v2_pokemonability(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonability_select_column!]
@@ -59940,7 +59940,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonability"
-  """
+    """
     pokemon_v2_pokemonability_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonability_select_column!]
@@ -59965,7 +59965,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemoncolor"
-  """
+    """
     pokemon_v2_pokemoncolor(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolor_select_column!]
@@ -59985,7 +59985,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemoncolor"
-  """
+    """
     pokemon_v2_pokemoncolor_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolor_select_column!]
@@ -60010,7 +60010,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemoncolorname"
-  """
+    """
     pokemon_v2_pokemoncolorname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolorname_select_column!]
@@ -60030,7 +60030,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemoncolorname"
-  """
+    """
     pokemon_v2_pokemoncolorname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemoncolorname_select_column!]
@@ -60055,7 +60055,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemondexnumber"
-  """
+    """
     pokemon_v2_pokemondexnumber(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemondexnumber_select_column!]
@@ -60075,7 +60075,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemondexnumber"
-  """
+    """
     pokemon_v2_pokemondexnumber_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemondexnumber_select_column!]
@@ -60100,7 +60100,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonegggroup"
-  """
+    """
     pokemon_v2_pokemonegggroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonegggroup_select_column!]
@@ -60120,7 +60120,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonegggroup"
-  """
+    """
     pokemon_v2_pokemonegggroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonegggroup_select_column!]
@@ -60145,7 +60145,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonevolution"
-  """
+    """
     pokemon_v2_pokemonevolution(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonevolution_select_column!]
@@ -60165,7 +60165,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonevolution"
-  """
+    """
     pokemon_v2_pokemonevolution_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonevolution_select_column!]
@@ -60190,7 +60190,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonform"
-  """
+    """
     pokemon_v2_pokemonform(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonform_select_column!]
@@ -60210,7 +60210,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonform"
-  """
+    """
     pokemon_v2_pokemonform_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonform_select_column!]
@@ -60235,7 +60235,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonformgeneration"
-  """
+    """
     pokemon_v2_pokemonformgeneration(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformgeneration_select_column!]
@@ -60255,7 +60255,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonformgeneration"
-  """
+    """
     pokemon_v2_pokemonformgeneration_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformgeneration_select_column!]
@@ -60280,7 +60280,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonformname"
-  """
+    """
     pokemon_v2_pokemonformname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformname_select_column!]
@@ -60300,7 +60300,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonformname"
-  """
+    """
     pokemon_v2_pokemonformname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformname_select_column!]
@@ -60366,7 +60366,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonformtype"
-  """
+    """
     pokemon_v2_pokemonformtype(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformtype_select_column!]
@@ -60386,7 +60386,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonformtype"
-  """
+    """
     pokemon_v2_pokemonformtype_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonformtype_select_column!]
@@ -60411,7 +60411,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemongameindex"
-  """
+    """
     pokemon_v2_pokemongameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemongameindex_select_column!]
@@ -60431,7 +60431,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemongameindex"
-  """
+    """
     pokemon_v2_pokemongameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemongameindex_select_column!]
@@ -60456,7 +60456,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonhabitat"
-  """
+    """
     pokemon_v2_pokemonhabitat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitat_select_column!]
@@ -60476,7 +60476,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonhabitat"
-  """
+    """
     pokemon_v2_pokemonhabitat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitat_select_column!]
@@ -60501,7 +60501,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonhabitatname"
-  """
+    """
     pokemon_v2_pokemonhabitatname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitatname_select_column!]
@@ -60521,7 +60521,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonhabitatname"
-  """
+    """
     pokemon_v2_pokemonhabitatname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonhabitatname_select_column!]
@@ -60546,7 +60546,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonitem"
-  """
+    """
     pokemon_v2_pokemonitem(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonitem_select_column!]
@@ -60566,7 +60566,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonitem"
-  """
+    """
     pokemon_v2_pokemonitem_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonitem_select_column!]
@@ -60591,7 +60591,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonmove"
-  """
+    """
     pokemon_v2_pokemonmove(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonmove_select_column!]
@@ -60611,7 +60611,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonmove"
-  """
+    """
     pokemon_v2_pokemonmove_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonmove_select_column!]
@@ -60636,7 +60636,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonshape"
-  """
+    """
     pokemon_v2_pokemonshape(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshape_select_column!]
@@ -60656,7 +60656,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonshape"
-  """
+    """
     pokemon_v2_pokemonshape_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshape_select_column!]
@@ -60681,7 +60681,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonshapename"
-  """
+    """
     pokemon_v2_pokemonshapename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshapename_select_column!]
@@ -60701,7 +60701,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonshapename"
-  """
+    """
     pokemon_v2_pokemonshapename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonshapename_select_column!]
@@ -60767,7 +60767,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonspeciesdescription"
-  """
+    """
     pokemon_v2_pokemonspeciesdescription(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesdescription_select_column!]
@@ -60787,7 +60787,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonspeciesdescription"
-  """
+    """
     pokemon_v2_pokemonspeciesdescription_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesdescription_select_column!]
@@ -60812,7 +60812,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonspeciesflavortext"
-  """
+    """
     pokemon_v2_pokemonspeciesflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesflavortext_select_column!]
@@ -60832,7 +60832,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonspeciesflavortext"
-  """
+    """
     pokemon_v2_pokemonspeciesflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesflavortext_select_column!]
@@ -60857,7 +60857,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonspeciesname"
-  """
+    """
     pokemon_v2_pokemonspeciesname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesname_select_column!]
@@ -60877,7 +60877,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonspeciesname"
-  """
+    """
     pokemon_v2_pokemonspeciesname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonspeciesname_select_column!]
@@ -60943,7 +60943,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemonstat"
-  """
+    """
     pokemon_v2_pokemonstat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonstat_select_column!]
@@ -60963,7 +60963,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemonstat"
-  """
+    """
     pokemon_v2_pokemonstat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemonstat_select_column!]
@@ -60988,7 +60988,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemontype"
-  """
+    """
     pokemon_v2_pokemontype(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontype_select_column!]
@@ -61008,7 +61008,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemontype"
-  """
+    """
     pokemon_v2_pokemontype_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontype_select_column!]
@@ -61033,7 +61033,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_pokemontypepast"
-  """
+    """
     pokemon_v2_pokemontypepast(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontypepast_select_column!]
@@ -61053,7 +61053,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_pokemontypepast"
-  """
+    """
     pokemon_v2_pokemontypepast_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_pokemontypepast_select_column!]
@@ -61078,7 +61078,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_region"
-  """
+    """
     pokemon_v2_region(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_region_select_column!]
@@ -61098,7 +61098,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_region"
-  """
+    """
     pokemon_v2_region_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_region_select_column!]
@@ -61123,7 +61123,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_regionname"
-  """
+    """
     pokemon_v2_regionname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_regionname_select_column!]
@@ -61143,7 +61143,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_regionname"
-  """
+    """
     pokemon_v2_regionname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_regionname_select_column!]
@@ -61168,7 +61168,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_stat"
-  """
+    """
     pokemon_v2_stat(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_stat_select_column!]
@@ -61188,7 +61188,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_stat"
-  """
+    """
     pokemon_v2_stat_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_stat_select_column!]
@@ -61211,7 +61211,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_statname"
-  """
+    """
     pokemon_v2_statname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_statname_select_column!]
@@ -61231,7 +61231,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_statname"
-  """
+    """
     pokemon_v2_statname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_statname_select_column!]
@@ -61256,7 +61256,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_supercontestcombo"
-  """
+    """
     pokemon_v2_supercontestcombo(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontestcombo_select_column!]
@@ -61276,7 +61276,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_supercontestcombo"
-  """
+    """
     pokemon_v2_supercontestcombo_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontestcombo_select_column!]
@@ -61301,7 +61301,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_supercontesteffect"
-  """
+    """
     pokemon_v2_supercontesteffect(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffect_select_column!]
@@ -61321,7 +61321,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_supercontesteffect"
-  """
+    """
     pokemon_v2_supercontesteffect_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffect_select_column!]
@@ -61346,7 +61346,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_supercontesteffectflavortext"
-  """
+    """
     pokemon_v2_supercontesteffectflavortext(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffectflavortext_select_column!]
@@ -61366,7 +61366,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_supercontesteffectflavortext"
-  """
+    """
     pokemon_v2_supercontesteffectflavortext_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_supercontesteffectflavortext_select_column!]
@@ -61391,7 +61391,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_type"
-  """
+    """
     pokemon_v2_type(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_type_select_column!]
@@ -61411,7 +61411,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_type"
-  """
+    """
     pokemon_v2_type_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_type_select_column!]
@@ -61434,7 +61434,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_typeefficacy"
-  """
+    """
     pokemon_v2_typeefficacy(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typeefficacy_select_column!]
@@ -61454,7 +61454,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_typeefficacy"
-  """
+    """
     pokemon_v2_typeefficacy_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typeefficacy_select_column!]
@@ -61479,7 +61479,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_typegameindex"
-  """
+    """
     pokemon_v2_typegameindex(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typegameindex_select_column!]
@@ -61499,7 +61499,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_typegameindex"
-  """
+    """
     pokemon_v2_typegameindex_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typegameindex_select_column!]
@@ -61524,7 +61524,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_typename"
-  """
+    """
     pokemon_v2_typename(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typename_select_column!]
@@ -61544,7 +61544,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_typename"
-  """
+    """
     pokemon_v2_typename_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_typename_select_column!]
@@ -61569,7 +61569,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_version"
-  """
+    """
     pokemon_v2_version(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_version_select_column!]
@@ -61589,7 +61589,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_version"
-  """
+    """
     pokemon_v2_version_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_version_select_column!]
@@ -61614,7 +61614,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_versiongroup"
-  """
+    """
     pokemon_v2_versiongroup(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroup_select_column!]
@@ -61634,7 +61634,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versiongroup"
-  """
+    """
     pokemon_v2_versiongroup_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroup_select_column!]
@@ -61659,7 +61659,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_versiongroupmovelearnmethod"
-  """
+    """
     pokemon_v2_versiongroupmovelearnmethod(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupmovelearnmethod_select_column!]
@@ -61679,7 +61679,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versiongroupmovelearnmethod"
-  """
+    """
     pokemon_v2_versiongroupmovelearnmethod_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupmovelearnmethod_select_column!]
@@ -61704,7 +61704,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_versiongroupregion"
-  """
+    """
     pokemon_v2_versiongroupregion(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupregion_select_column!]
@@ -61724,7 +61724,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versiongroupregion"
-  """
+    """
     pokemon_v2_versiongroupregion_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versiongroupregion_select_column!]
@@ -61749,7 +61749,7 @@ type subscription_root {
 
     """
     fetch data from the table: "pokemon_v2_versionname"
-  """
+    """
     pokemon_v2_versionname(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versionname_select_column!]
@@ -61769,7 +61769,7 @@ type subscription_root {
 
     """
     fetch aggregated fields from the table: "pokemon_v2_versionname"
-  """
+    """
     pokemon_v2_versionname_aggregate(
         """distinct select on columns"""
         distinct_on: [pokemon_v2_versionname_select_column!]

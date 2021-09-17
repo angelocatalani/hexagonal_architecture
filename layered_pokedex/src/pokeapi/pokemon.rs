@@ -58,6 +58,9 @@ impl Pokemon {
     pub fn description(&self) -> &Option<String> {
         &self.description
     }
+    pub fn name(&self) -> &String {
+        &self.name
+    }
     pub fn set_description(&mut self, description: Option<String>) {
         self.description = description
     }

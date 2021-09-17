@@ -7,6 +7,7 @@ pub struct Settings {
     pub application: ApplicationSettings,
     pub pokeapi_service: PokeApiServiceSettings,
     pub translated_service: TranslationServiceSettings,
+    pub cache_service: CacheServiceSettings,
 }
 
 #[derive(Deserialize)]
@@ -25,6 +26,11 @@ pub struct PokeApiServiceSettings {
 pub struct TranslationServiceSettings {
     pub url: Url,
     pub timeout_seconds: u64,
+}
+
+#[derive(Deserialize)]
+pub struct CacheServiceSettings {
+    pub url: Url,
 }
 
 impl Settings {

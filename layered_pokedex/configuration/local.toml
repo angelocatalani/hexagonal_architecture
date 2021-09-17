@@ -9,3 +9,6 @@ timeout_seconds = 10
 [translated_service]
 url = "https://api.funtranslations.com/translate/"
 timeout_seconds = 10
+
+[cache_service]
+url = "redis://0.0.0.0/"

@@ -1,3 +1,5 @@
+use rand::distributions::Alphanumeric;
+use rand::Rng;
 use reqwest::Response;
 use serde_json::{json, Value};
 use wiremock::MockServer;
@@ -38,6 +40,7 @@ pub async fn spawn_app() -> TestApp {
 
 pub struct PokeApiResponseBuilder<'a> {
     habitat_name: &'a str,
+    name: String,
     is_legendary: bool,
     without_pokemon: bool,
 }
@@ -46,12 +49,17 @@ impl<'a> PokeApiResponseBuilder<'a> {
     pub fn new() -> PokeApiResponseBuilder<'a> {
         Self {
             habitat_name: "any_habitat",
+            name: random_pokemon_name(),
             is_legendary: true,
             without_pokemon: false,
         }
     }
     pub fn with_habitat(&mut self, name: &'a str) -> &mut Self {
         self.habitat_name = name;
+        self
+    }
+    pub fn with_name(&mut self, name: String) -> &mut Self {
+        self.name = name;
         self
     }
     pub fn with_legendary_status(&mut self, is_legendary: bool) -> &mut Self {
@@ -77,7 +85,7 @@ impl<'a> PokeApiResponseBuilder<'a> {
                    "data":{
                       "info":[
                          {
-                            "name":"any_pokemon",
+                            "name":self.name,
                             "habitat":{
                                "name":self.habitat_name
                             },
@@ -114,4 +122,12 @@ pub fn valid_translation_response() -> Value {
 pub async fn execute_get_request(endpoint: &str) -> Response {
     let client = reqwest::Client::new();
     client.get(endpoint).send().await.unwrap()
+}
+
+pub fn random_pokemon_name() -> String {
+    rand::thread_rng()
+        .sample_iter(&Alphanumeric)
+        .take(5)
+        .map(char::from)
+        .collect()
 }

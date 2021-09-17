@@ -8,7 +8,7 @@ use crate::translated::TranslatedService;
 
 #[tracing::instrument(
 name = "Getting pokemon with translated description",
-skip(name, pokeapi_service, translated_service,cache_service),
+skip(name, pokeapi_service, translated_service, cache_service),
 fields(
 pokemon_name = % name.as_str(),
 )
@@ -22,26 +22,17 @@ pub async fn pokemon_translated(
     let pokemon_name = name.into_inner();
     let mut pokemon = retrieve_pokemon(pokemon_name.clone(), pokeapi_service).await?;
 
-    // todo: refactor
-    if let Ok(description) = cache_service.get(&pokemon_name).await {
-        pokemon.set_description(description);
-        Ok(HttpResponse::Ok().json(&pokemon))
-    } else {
-        let translated_description = translate_pokemon_description(translated_service, &pokemon)
+    let translated_description =
+        translate_pokemon_description(translated_service, cache_service, &pokemon)
             .await
             .context("Failed to translate pokemon description");
-        match translated_description {
-            Ok(description) => {
-                cache_service
-                    .set(&pokemon_name, description.as_deref())
-                    .await
-                    .map_err(|_| tracing::warn!("Failed to update redis cache"))
-                    .ok();
-                pokemon.set_description(description);
-                Ok(HttpResponse::Ok().json(&pokemon))
-            }
-            Err(_) => Ok(HttpResponse::Ok().json(&pokemon)),
+
+    match translated_description {
+        Ok(description) => {
+            pokemon.set_description(description);
+            Ok(HttpResponse::Ok().json(&pokemon))
         }
+        Err(_) => Ok(HttpResponse::Ok().json(&pokemon)),
     }
 }
 
@@ -49,7 +40,7 @@ pub async fn pokemon_translated(
 name = "Retrieving pokemon",
 skip(pokeapi_service),
 fields(
-name = % name,
+pokemon_name = % name,
 )
 )]
 async fn retrieve_pokemon(
@@ -62,24 +53,35 @@ async fn retrieve_pokemon(
 
 #[tracing::instrument(
 name = "Translating pokemon description",
-skip(translated_service),
+skip(translated_service, cache_service),
 fields(
 pokemon = % format ! ("{:#?}", pokemon),
 )
 )]
 async fn translate_pokemon_description(
     translated_service: web::Data<TranslatedService>,
+    cache_service: web::Data<CacheService>,
     pokemon: &Pokemon,
 ) -> anyhow::Result<Option<String>> {
     match pokemon.description() {
         None => Ok(None),
-        Some(text) => {
-            let new_description = if pokemon.has_cave_habitat_or_is_legendary() {
-                translated_service.translate_with_yoda(text).await?
-            } else {
-                translated_service.translate_with_shakespeare(text).await?
-            };
-            Ok(Some(new_description))
-        }
+        Some(text) => match cache_service.get(pokemon.name()).await {
+            Ok(translated_description) => Ok(Some(translated_description)),
+            Err(_) => {
+                let translated_description = if pokemon.has_cave_habitat_or_is_legendary() {
+                    translated_service.translate_with_yoda(text).await?
+                } else {
+                    translated_service.translate_with_shakespeare(text).await?
+                };
+                cache_service
+                    .set(pokemon.name(), &translated_description)
+                    .await
+                    .map_err(|e| {
+                        tracing::warn!("Failed to update the descriptions cache.\n{:?}", e)
+                    })
+                    .ok();
+                Ok(Some(translated_description))
+            }
+        },
     }
 }

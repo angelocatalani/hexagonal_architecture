@@ -40,14 +40,10 @@ impl PokedexApp {
             )
             .context("Failed to instantiate PokeapiService")?,
         );
-        // todo: get redis ip from config
         let cache_service = web::Data::new(
-            CacheService::new(
-                "redis://0.0.0.0/",
-                settings.translated_service.timeout_seconds,
-            )
-            .await
-            .context("Failed to instantiate PokeapiService")?,
+            CacheService::new(settings.cache_service.url.as_ref())
+                .await
+                .context("Failed to instantiate PokeapiService")?,
         );
         let server = HttpServer::new(move || {
             App::new()

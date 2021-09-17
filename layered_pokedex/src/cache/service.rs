@@ -6,7 +6,7 @@ pub struct CacheService {
 }
 
 impl CacheService {
-    pub async fn new(url: &str, timeout_second: u64) -> anyhow::Result<Self> {
+    pub async fn new(url: &str) -> anyhow::Result<Self> {
         let client = redis::Client::open(url).context("Error creating Redis client")?;
         let connection_manager = client
             .get_tokio_connection_manager()
@@ -15,20 +15,17 @@ impl CacheService {
 
         Ok(Self { connection_manager })
     }
-    pub async fn get(&self, pokemon_name: &str) -> anyhow::Result<Option<String>> {
-        println!("Cache input: {}", pokemon_name);
+    pub async fn get(&self, pokemon_name: &str) -> anyhow::Result<String> {
         let mut connection = self.connection_manager.clone();
-        let r = connection
+        connection
             .get(pokemon_name)
             .await
-            .with_context(|| format!("Error retrieving pokemon: {}", pokemon_name));
-        println!("Cache result: {:?}", r);
-        r
+            .with_context(|| format!("Error retrieving pokemon: {}", pokemon_name))
     }
     pub async fn set(
         &self,
         pokemon_name: &str,
-        pokemon_description: Option<&str>,
+        pokemon_description: &str,
     ) -> anyhow::Result<String> {
         let mut connection = self.connection_manager.clone();
         connection
