@@ -2,4 +2,5 @@
 
 members = [
     "layered_pokedex",
+    "hexagonal_pokedex"
 ]

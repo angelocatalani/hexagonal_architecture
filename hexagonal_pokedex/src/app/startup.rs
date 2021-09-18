@@ -38,12 +38,12 @@ impl PokedexApp {
                 settings.translated_service.url,
                 settings.translated_service.timeout_seconds,
             )
-            .context("Failed to instantiate TranslatedService")?,
+            .context("Failed to instantiate PokeapiService")?,
         );
         let cache_service = web::Data::new(
             CacheService::new(settings.cache_service.url.as_ref())
                 .await
-                .context("Failed to instantiate CacheService")?,
+                .context("Failed to instantiate PokeapiService")?,
         );
         let server = HttpServer::new(move || {
             App::new()

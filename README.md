@@ -37,6 +37,11 @@ the `bb8` dependency)
 
 If the persistence layer changes, the domain layer also changes. Same thing for the presentation layer.
 
+The violation of the SRP principle in the 3-layer architecture is due to the propagation of changes from the lower
+layers to the upper layers.
+
+To stop this change propagation we could use the DIP.
+
 #### Promotes database-driven design instead of domain-driven
 
 To develop a feature we need to start with the persistence layer.
@@ -67,42 +72,111 @@ This makes the domain, and the persistence layer even more tightly coupled.
 
 ## Hexagonal architecture
 
-The violation of the SRP principle in the 3-layer architecture is due to the propagation of changes from the lower
-layers to the upper layers.
+### Introduction
 
-To stop this change propagation we can use the DIP.
+The hexagonal architecture organizes the code to make the business rules independent
+of any kind of integration point (db, frameworks, UI, ...).
 
-The behaviour of our business requirement: the core code must not depend on external dependencies associated with any
-kind of integration points.
+Independence means the business rules do not have external dependencies, but all
+the other components of the application depends on the business rules.
 
-The core code interacts with the external dependencies using interfaces. In this way, the core code does not have any
-outgoing dependencies. And all dependencies are towards the core code.
+The business rules are the `application core`.
 
-In terms of hexagonal architecture we have:
+The other components are called `adaptors` and interact with the `application core`
+using the `ports`. 
 
-- the hexagon: core code + ports + services
-- adapters
+The `application core` and the `ports` represents the hexagon.
 
 The ports can be:
 
-- incoming port (e.g., Use-case, Query): implemented by services (query, use case, ...)
-- outgoing port (e.g., LoadAccountPort)
+- incoming port (e.g., Use-case, Query): implemented by `services` inside the hexagon
+- outgoing port (e.g., LoadAccountPort): implemented outside the hexagon
 
 The adapters can be:
 
-- incoming adapter (e.g., Controller): calls the incoming port, and the concrete implementation is inside the hexagon
-- outgoing adapter (e.g., Repository): implements the outgoing port, and are called by the hexagon
+- incoming adapter (e.g., Controller): calls the incoming port
+- outgoing adapter (e.g., Repository): implements the outgoing port
 
-Incoming ports are the only way to interact with the hexagon. Incoming ports are use cases implemented by a service in
-the hexagon. Incoming ports are used by incoming adapters.
+### Incoming ports (use cases) and services
+https://stackoverflow.com/questions/62818105/interface-for-use-cases-application-services
 
-Outgoing ports are the only way for the hexagon to interact with the integration points. Outgoing ports are implemented
-by outgoing adapters Outgoing ports are used by the hexagon (e.g., the service) to interact with the integration points.
+In short, you usually don't need interfaces on use cases (incoming ports)
+because your primary (incoming) adapters (client of your hexagon) depend upon the hexagon by nature.
 
-Incoming ports are not implemented by the incoming adapater: they are implemented by the service and used by the
-incoming adapter.
+What is more important is to make sure that your Application services only access interfaces
+rather than concrete implementations that are dependent on infrastructure.
+That means application services should only depend on interfaces to use repositories
+or components that access other infrastructure.
 
-Outgoing ports are implemented by the outgoing adapter
+https://blog.allegro.tech/2020/05/hexagonal-architecture-by-example.html
+
+It is often assumed that each port needs to be an interface,
+though it does not make much sense for inbound ports.
+
+Interfaces, in general, allow you to decouple implementation from the component that uses it,
+following the Dependency Inversion Principle.
+They are essential to decouple the domain ArticleService from ExternalServiceClientAuthorRepository
+hidden behind the AuthorRepository port.
+
+Hiding ArticleService behind an interface (especially a meaningless IArticleService)
+would most likely be seen as over-engineering and would give you nothing in return.
+
+### Package Organization
+
+Organize packages by bounded context (`feature/`):
+- `adapter/[in|out]/...` 
+- `domain/...`
+- `application/[services|out_ports]/...` or `application/[services|ports]/[in|out]/...`
+
+This structure reduces the:
+- architecture-code gap
+- aka screaming architecture
+
+It is important to note:
+- no dependencies from `application` to the `adapter`
+- may be dependencies from the `application` and the `domain`
+- may be dependencies from the `adapter` and the `domain`
+
+### Domain model
+
+The domain model can be rich or anemic.
+
+If it is rich it implements the business rules operations and validations.
+Otherwise, it is a data structure, and the business validations are delegated to the use case/service.
+
+Domain models keep a state that can be modified by the business rules operations.
+This because the domain models are the inputs to the outgoing ports that can for example
+store the updated domain model to the db.
+
+I prefer having a rich domain model so that the use case/service only need to orchestrate calls
+to the domain models and outgoing ports.
+
+### Service/Use case
+
+As said before, I prefer having the service without the incoming port.
+This means service and use-case are the same thing.
+
+The use case:
+- takes the valid input (validation can be delegated to the input constructor)
+- validates business rules
+- updates the domain model state
+- returns the output to the caller adapter
+
+The input is called: `...Command` and the constructor verifies its syntactical validity.
+To avoid coupling between services, it is better to have a dedicated input for each service.
+
+Validating business rules is the semantically validity of the use case.
+It can happen at the domain model or in the use case.
+Since I choose to have a rich domain model it happens in the domain model
+
+The output should be dedicated for each service, since it could create coupling between
+the calling adapter and the service.
+In general, it is better to return as little as possible data.
+
+Read-only use case should be somehow distinguished from services with side effect.
+This plays well with the CQRS.
+This is easy to be done with interfaces as incoming ports.
+In our case, we can use an input called: `...Query`
 
 ## Resources
 
