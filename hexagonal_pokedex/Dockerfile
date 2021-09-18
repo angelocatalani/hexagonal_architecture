@@ -17,7 +17,7 @@ COPY --from=cacher /app/target target
 COPY --from=cacher /usr/local/cargo /usr/local/cargo
 COPY .. .
 
-RUN cargo build --release --bin pokedex
+RUN cargo build --release --bin hexagonal_pokedex
 
 # runtime stage
 FROM debian:buster-slim AS runtime
@@ -34,8 +34,8 @@ RUN groupadd --gid 1000 pokedex_group \
 USER pokedex
 WORKDIR pokedex
 # the binary is statically compiled
-COPY --from=builder --chown=pokedex_group:pokedex /app/target/release/pokedex pokedex
+COPY --from=builder --chown=pokedex_group:pokedex /app/target/release/hexagonal_pokedex hexagonal_pokedex
 COPY --chown=pokedex_group:pokedex configuration configuration
 ENV APP_APPLICATION__HOST "0.0.0.0"
 EXPOSE 8080
-ENTRYPOINT ["./pokedex"]
+ENTRYPOINT ["./hexagonal_pokedex"]
