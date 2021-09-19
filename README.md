@@ -224,6 +224,27 @@ Finally, services may need to call multiple adapter's operations transactional:
 this can potentially result into a dependency in the wrong direction since the service will probably need to know
 the db details to perform something transactional.
 
+### Testing
+
+There are 3 level of testing:
+- unit test
+- integration tests
+- system test
+
+They have respectively a decreasing code coverage since the fewer components are mocked the more expensive they become.
+
+Domain entity must be tested with unit test.
+
+Services must be tested with unit test and mocks: test how the service interacts with the ports.
+It is important to test only the significant interactions since the tests must verify the behaviour not the implementation.
+Otherwise, the tests could have every time we change the implementation but keep the behaviour the same.
+
+Outgoing adapter must be tested with integration tests spinning the required containers (databases,...).
+
+The relevant path a user can take must be tested with system test.
+System test mut contain the fewer possible mocks.
+I want to make the system test as much agnostic as possible from the web framework used.
+
 
 ## Resources
 
