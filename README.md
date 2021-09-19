@@ -162,21 +162,68 @@ The use case:
 - updates the domain model state
 - returns the output to the caller adapter
 
-The input is called: `...Command` and the constructor verifies its syntactical validity.
+The input parameter is called: `...Command` and the constructor verifies its syntactical validity.
 To avoid coupling between services, it is better to have a dedicated input for each service.
 
 Validating business rules is the semantically validity of the use case.
 It can happen at the domain model or in the use case.
-Since I choose to have a rich domain model it happens in the domain model
+Since I choose to have a rich domain model if possible it happens in the domain model.
 
 The output should be dedicated for each service, since it could create coupling between
-the calling adapter and the service.
+the other adapters.
 In general, it is better to return as little as possible data.
 
-Read-only use case should be somehow distinguished from services with side effect.
+Read-only services should be somehow distinguished from services with side effect.
 This plays well with the CQRS.
 This is easy to be done with interfaces as incoming ports.
 In our case, we can use an input called: `...Query`
+
+### Web Adapters
+
+The web adapter is an incoming adapter.
+
+It listens for http connections on a given route and performs:
+- authorization checks
+- map its input model to the input model of the service to call -> validate the conversion between the 2 layers
+- call the service
+- map the service's output to a http response
+
+Adapter should contain the least possible routes (preferably only one).
+In this way each adapter:
+- has its own input/out model that is not shared between the other adapters
+- contains a small number of services
+- easier to unit-test
+
+### Persistence Adapter
+
+The persistence adapter is an outgoing adapter: it implements one or more outgoing ports.
+
+The input and output of the outgoing port must be an hexagon domain entity because the hexagon calls the outgoing ports,
+and it cannot depend on external adapters.
+
+The outgoing ports should contain only one method (or very cohesive methods) and we should avoid having the repository
+interface with many methods for the database interactions of all the services:
+
+- _Depending on something that carries baggage you do not need, can cause you troubles you didn't expect 
+- (Martin C. Robert)_
+- the code is more difficult to understand and mock since some service will not use all the methods
+
+However, the concrete outgoing adapter implementation, can implement more outgoing interfaces at once.
+
+Ideally, we should have one adapter for each aggregate.
+In this way we can separate the persistence needs of different bounded context.
+In fact different bounded context must interact with each other through incoming ports
+(cannot directly use outgoing ports of other bounded context).
+
+To make the input parameter of the persistence adapter usable by the db utilities we could directly annotate
+the domain model. However, this creates a dependency in the wrong direction that should be forbidden.
+The correct way is to implement a proper mapping between the hexagon domain model and the adapter, but this results 
+into more code.
+
+Finally, services may need to call multiple adapter's operations transactional:
+this can potentially result into a dependency in the wrong direction since the service will probably need to know
+the db details to perform something transactional.
+
 
 ## Resources
 
