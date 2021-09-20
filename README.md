@@ -228,7 +228,7 @@ the db details to perform something transactional.
 
 There are 3 level of testing:
 - unit test
-- integration tests
+- integration test
 - system test
 
 They have respectively a decreasing code coverage since the fewer components are mocked the more expensive they become.
@@ -237,13 +237,57 @@ Domain entity must be tested with unit test.
 
 Services must be tested with unit test and mocks: test how the service interacts with the ports.
 It is important to test only the significant interactions since the tests must verify the behaviour not the implementation.
-Otherwise, the tests could have every time we change the implementation but keep the behaviour the same.
+Otherwise, the tests could fail every time we change the implementation but keep the same behaviour.
 
 Outgoing adapter must be tested with integration tests spinning the required containers (databases,...).
 
 The relevant path a user can take must be tested with system test.
 System test mut contain the fewer possible mocks.
-I want to make the system test as much agnostic as possible from the web framework used.
+System test must be as much agnostic as possible from the web framework used.
+
+### Mapping between boundaries
+
+We have 3 layers:
+- controller
+- application domain + services
+- outgoing adapter
+
+Each of them could have its own I/O domain model, or they can share the same application domain model.
+
+In the first case the SRP is always honoured, but we have boilerplate code to map between layers.
+In the second case we have less code but the SRP is not honoured: in fact the application domain entities
+will contain annotations related to serialization/deserialization/db pre-post processing/http parsing.
+
+There are 3 different strategies that can be mixed with each other:
+- no-mapping: use the same application domain entities for all layers
+- two-way mapping: a dedicated domain model for each layer
+- full mapping: a dedicated domain model for each layer + each service has its own input model
+
+The no-mapping is fine until the In-Out adapter have special requirements (aside from annotations).
+For example if the application domain needs to implement a complex deserialization algorithm,
+to be used by the controller, it is better to delegate this logic to a custom input model for the controller.
+
+The no-mapping and the two-way mapping have the problem that the domain model is used to communicate between layers.
+This means the domain model can change for controller/out-adapter's reasons.
+
+This is why the full mapping has a specific input for each service and outgoing adapter.
+
+When using the full mapping strategy, we could perform input validation at the level of the input service.
+
+However, in my opinion the application domain entity should enforce the required validations.
+In this way we can fully leverage the Rust type system.
+For example if I want to be sure an input string is a valid email, I would use an application domain entity,
+`Email` to enforce that constraint, rather than trusting the service to perform its validation.
+
+Finally, I think the best approach is:
+- use if possible the no-mapping.
+  - annotation violates the SRP, but they are fine.
+- in case the application domain entity has something more complex, add specific domain input to the required layers:
+  controller or outgoing adapter -> two-way mapping (this should happen rarely)
+- if the service is a command, it is useful to add a specific input model when 
+  there is not a clear mapping between the service input and the domain model
+
+The domain model must be in charge of enforcing their syntactical validity at any given state.
 
 
 ## Resources
