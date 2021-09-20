@@ -289,6 +289,13 @@ Finally, I think the best approach is:
 
 The domain model must be in charge of enforcing their syntactical validity at any given state.
 
+### Configuration
+
+The configuration components creates the application, instantiating the concrete classes and connecting with each other.
+
+This component must also have access to configuration files.
+
+I think a good approach is to implement the `TryFrom` for the `ConfigurationSettings` that build the application.
 
 ## Resources
 
