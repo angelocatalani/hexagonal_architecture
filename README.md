@@ -162,7 +162,7 @@ The use case:
 - updates the domain model state
 - returns the output to the caller adapter
 
-The input parameter is called: `...Command` and the constructor verifies its syntactical validity.
+The input parameter is called: `...Command` (full mapping strategy) and the constructor verifies its syntactical validity.
 To avoid coupling between services, it is better to have a dedicated input for each service.
 
 Validating business rules is the semantically validity of the use case.
@@ -177,6 +177,8 @@ Read-only services should be somehow distinguished from services with side effec
 This plays well with the CQRS.
 This is easy to be done with interfaces as incoming ports.
 In our case, we can use an input called: `...Query`
+
+Input and output of each port must be next to the port (inside `application/` or `domain`)
 
 ### Web Adapters
 
@@ -296,6 +298,41 @@ The configuration components creates the application, instantiating the concrete
 This component must also have access to configuration files.
 
 I think a good approach is to implement the `TryFrom` for the `ConfigurationSettings` that build the application.
+
+### Final Considerations
+
+Package organization:
+- `configuration/...`
+- `feature/`
+  - `adapter/[in|out]/...`
+  - `domain/...`
+  - `application/[services|outgoing_ports]/...`
+
+Services are incoming ports without the use case interface: I decided not to have the use case interface because
+the incoming adapter has a natural dependency on the hexagon.
+
+Application domain entity must be self validating (syntactical validation).
+I prefer having a rich domain model so that the use case/service only need to orchestrate calls
+to the domain models and outgoing ports.
+
+The outgoing ports should contain only one method (or very cohesive methods) and we should avoid having the repository
+interface with many methods for the database interactions of all the services.
+Ideally, we should have one adapter for each aggregate.
+
+The input and output of each port must be next to the port (inside `application/` or `domain`).
+
+Domain entity must be tested with unit test.
+
+Services must be tested with unit test and mocks: test only the meaningful interactions.
+
+Outgoing adapter must be tested with integration tests spinning the required containers
+
+The relevant path a user can take must be tested with system test: agnostic as possible from the web framework used.
+
+Use the no mapping strategy if possible.
+If the service implements a non-trivial command it is ok to use the full mapping strategy for the controller.
+If the domain entity has complexities due to external requirements adopt the 2 way mapping.
+
 
 ## Resources
 
