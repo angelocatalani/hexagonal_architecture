@@ -316,3 +316,5 @@ If the domain entity has complexities due to external requirements adopt the 2 w
 - [Get Your Hands Dirty on Clean Architecture](https://reflectoring.io/book/)
 - [Buckpal App](https://github.com/thombergs/buckpal)
 - [Reevaluating the Layered Architecture](https://javadevguy.wordpress.com/2019/01/06/reevaluating-the-layered-architecture/)
+- [SO question about use case](https://stackoverflow.com/questions/62818105/interface-for-use-cases-application-services)
+- [Hexagonal architecture blog](https://blog.allegro.tech/2020/05/hexagonal-architecture-by-example.html)
