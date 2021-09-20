@@ -10,29 +10,6 @@ Notes and proof of concepts about the Hexagonal Architecture in Rust.
 
 ## 3 Layer architecture
 
-### Layered Pokedex
-
-`Layered Pokedex` is a 3 layer web application.
-
-Initially the `translated` endpoint does not support caching.
-
-The code is clean and fully tested. So far the layered approach has been the best approach.
-
-To implement a caching mechanism with Redis we cannot inject the Redis client, inside the `Translated` service because:
-
-- the resulting code would be difficult to unit-test (how to mock the Redis client).
-- the `Translated` service would have an additional reason to change
-
-So, the best approach is to create a cache service that wraps the Redis client.
-
-This means, the `translated` endpoint is in charge of checking and updating the cache.
-
-For Redis connections we are using multiplexing instead of a connection pool, basically for simplicity (avoid adding
-the `bb8` dependency)
-(https://redis.com/blog/multiplexing-explained/)
-
-### Drawbacks
-
 #### The SRP is violated
 
 If the persistence layer changes, the domain layer also changes. Same thing for the presentation layer.
