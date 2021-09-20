@@ -1,11 +1,17 @@
 name: Scheduled Build
+#on:
+#  schedule:
+#    - cron: '0 0 * * 1' # every Monday at 00:00
 on:
-  schedule:
-    - cron: '0 0 * * 1' # every Monday at 00:00
+  push:
+    branches: [ main ]
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
     steps:
+      # This Checkout is necessary when using a context in docker/build-push-action
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -22,15 +28,6 @@ jobs:
           push: true
           tags: challengepokedex1/layered_pokedex
           context: ./layered_pokedex
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
-
-      - name: Build and push hexagonal pokedex
-        id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: challengepokedex1/hexagonal_pokedex
-          context: ./hexagonal_pokedex
+          file: ./layered_pokedex/Dockerfile
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
