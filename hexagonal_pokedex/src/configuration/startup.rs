@@ -25,6 +25,7 @@ impl PokedexApp {
             .local_addr()
             .context("Fail to extract port from binding url")?
             .port();
+
         let pokemon_info = web::Data::new(PokemonInfo::new(
             PokeApi::new(settings.poke_api.url, settings.poke_api.timeout_seconds)
                 .context("Failed to instantiate `PokeApi` client")?,

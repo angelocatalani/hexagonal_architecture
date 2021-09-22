@@ -281,9 +281,9 @@ Package organization:
 
 - `configuration/...`
 - `feature/`
-    - `adapter/[in|out]/...`
+    - `adapter/[route|out]/...`
     - `domain/...`
-    - `application/[services|outgoing_ports]/...`
+    - `port/[service|out]/...`
 
 Services are incoming ports without the use case interface: I decided not to have the use case interface because the
 incoming adapter has a natural dependency on the hexagon.
@@ -295,7 +295,7 @@ The outgoing ports should contain only one method (or very cohesive methods) and
 interface with many methods for the database interactions of all the services. Ideally, we should have one adapter for
 each aggregate.
 
-The input and output of each port must be next to the port (inside `application/` or `domain`).
+The input and output of each port must be next to the port (inside `port/` or `domain`).
 
 Domain entity must be tested with unit test.
 
