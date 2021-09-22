@@ -1,0 +1,14 @@
+[application]
+host = "127.0.0.1"
+port = 8080
+
+[poke_api]
+url = "https://beta.pokeapi.co/graphql/v1beta"
+timeout_seconds = 10
+
+[funtranslation_api]
+url = "https://api.funtranslations.com/translate/"
+timeout_seconds = 10
+
+[redis_cache]
+url = "redis://0.0.0.0/"

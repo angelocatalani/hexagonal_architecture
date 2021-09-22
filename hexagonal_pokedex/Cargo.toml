@@ -14,6 +14,7 @@ name = "hexagonal_pokedex"
 [dependencies]
 actix-web = "4.0.0-beta.8"
 anyhow = "1.0.40"
+async-trait = "0.1.51"
 config = "0.11"
 graphql_client = "0.10"
 redis = { version = "0.21.2", features = ["tokio-comp", "connection-manager"] }
@@ -30,6 +31,7 @@ tracing-subscriber = { version = "0.2.12", features = ["registry", "env-filter"]
 [dev-dependencies]
 actix-rt = "2"
 lazy_static = "1.4"
+mockall = "0.10.2"
 rand = "0.8.4"
 tokio = { version = "1.3", features = ["net", "macros", "rt"] }
 wiremock = "0.5.2"
