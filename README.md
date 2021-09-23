@@ -275,6 +275,44 @@ This component must also have access to configuration files.
 
 I think a good approach is to implement the `TryFrom` for the `ConfigurationSettings` that build the application.
 
+
+### Boundaries
+
+In Rust each module can access regardless of the visibility:
+- all the ancestor modules
+- the first level children module of any ancestor module
+
+If an item is public it can be accessed by:
+- any module can access all the ancestors of the item
+
+In Rust it is not always possible to enforce boundaries thorough visibility:
+- e.g., the services should not b able to access the adapter,
+  but the configuration that is an ancestor of both must be able to do
+
+We can use `ArchUnit` to test the boundaries, and once the application is stable split into separate crates with
+explicit dependency configuration at compile time.
+
+## Shortcut
+
+- using the domain entity as input/out model for a service is fine until the service does not become complex
+- Outgoing adapter can be used directly inside the incoming adapter without the service if the use case is simple 
+  (CRUD operations)
+
+Each shortcut/pragmatic-dirty choice must be documented with ADR to avoid the `Brkone Windows Theory`
+
+## Decide the architecture style
+
+The main drive of hexagonal architecture is evolving domain code free from external influence.
+
+Hexagonal architecture is a good fit for DDD where the domain drives the development.
+
+However, not all the projects have such a big focus on domain code:
+- e.g., integration code, simple domain logic, ....
+
+In such cases the hexagonal architecture adds complexities in terms of:
+- useless abstractions
+- larger code base
+
 ### Final Considerations
 
 Package organization:
