@@ -35,7 +35,7 @@ USER pokedex
 WORKDIR pokedex
 # the binary is statically compiled
 COPY --from=builder --chown=pokedex_group:pokedex /app/target/release/hexagonal_pokedex hexagonal_pokedex
-COPY --chown=pokedex_group:pokedex configuration configuration
+COPY --chown=pokedex_group:pokedex src/configuration/local.toml src/configuration/local.toml
 ENV APP_APPLICATION__HOST "0.0.0.0"
 EXPOSE 8080
 ENTRYPOINT ["./hexagonal_pokedex"]
